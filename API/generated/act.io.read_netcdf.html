@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>act.io.read_netcdf &mdash; Atmospheric data Community Toolkit 0.post1+ga98a069 documentation</title>
+  <title>act.io.read_netcdf &mdash; Atmospheric data Community Toolkit 0.post1+ga08286d documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -38,7 +38,7 @@
             <a href="../../index.html" class="icon icon-home"> Atmospheric data Community Toolkit
           </a>
               <div class="version">
-                0.post1+ga98a069
+                0.post1+ga08286d
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -156,17 +156,12 @@ to set time.</p></li>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<p>This example will load the example sounding data used for unit testing.
-.. code-block :: python</p>
-<blockquote>
-<div><p>import act
-the_ds, the_flag = act.io.armfiles.read_netcdf(</p>
-<blockquote>
-<div><p>act.tests.sample_files.EXAMPLE_SONDE_WILDCARD</p>
-</div></blockquote>
-<p>)
-print(the_ds.attrs._datastream)</p>
-</div></blockquote>
+<p>This example will load the example sounding data used for unit testing.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">act</span>
+<span class="n">the_ds</span><span class="p">,</span> <span class="n">the_flag</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">armfiles</span><span class="o">.</span><span class="n">read_netcdf</span><span class="p">(</span><span class="n">act</span><span class="o">.</span><span class="n">tests</span><span class="o">.</span><span class="n">sample_files</span><span class="o">.</span><span class="n">EXAMPLE_SONDE_WILDCARD</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">the_ds</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">_datastream</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </section>
