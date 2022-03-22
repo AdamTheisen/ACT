@@ -1,86 +1,45 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>act.plotting.WindRoseDisplay &mdash; Atmospheric data Community Toolkit 1.0.3.post20+g1500263 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/gallery-dataframe.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/gallery-rendered-html.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>act.plotting.WindRoseDisplay &mdash; Atmospheric data Community Toolkit 0.post1+g62882fd documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery-binder.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery-dataframe.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery-rendered-html.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="act.plotting.WindRoseDisplay.add_colorbar" href="act.plotting.WindRoseDisplay.add_colorbar.html" />
     <link rel="prev" title="act.plotting.TimeSeriesDisplay.time_height_scatter" href="act.plotting.TimeSeriesDisplay.time_height_scatter.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../index.html" class="icon icon-home"> Atmospheric data Community Toolkit
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                1.0.3.post20+g1500263
+                0.post1+g62882fd
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -88,23 +47,11 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CREATING_ENVIRONMENTS.html">Setting up an Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../source/auto_examples/index.html">ACT Example Gallery</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">API Reference Manual</a><ul class="current">
@@ -148,80 +95,37 @@
 <li class="toctree-l1"><a class="reference external" href="https://github.com/ARM-DOE/ACT/issues">GitHub Issue Tracker</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Atmospheric data Community Toolkit</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../index.html">API Reference Manual</a> &raquo;</li>
-        
           <li><a href="act.plotting.html">act.plotting</a> &raquo;</li>
-        
       <li>act.plotting.WindRoseDisplay</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/API/generated/act.plotting.WindRoseDisplay.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <section id="act-plotting-windrosedisplay">
 <h1>act.plotting.WindRoseDisplay<a class="headerlink" href="#act-plotting-windrosedisplay" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="act.plotting.WindRoseDisplay">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">act.plotting.</span></span><span class="sig-name descname"><span class="pre">WindRoseDisplay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subplot_shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1,)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ds_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/act/plotting/windrosedisplay.html#WindRoseDisplay"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#act.plotting.WindRoseDisplay" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">act.plotting.</span></span><span class="sig-name descname"><span class="pre">WindRoseDisplay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subplot_shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1,)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ds_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/act/plotting/windrosedisplay.html#WindRoseDisplay"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#act.plotting.WindRoseDisplay" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for handing wind rose plots.</p>
 <p>This is inherited from the <a class="reference internal" href="act.plotting.Display.html#act.plotting.Display" title="act.plotting.Display"><code class="xref py py-func docutils literal notranslate"><span class="pre">act.plotting.Display()</span></code></a>
 class and has therefore has the same attributes as that class.
@@ -251,7 +155,7 @@ to this class.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="act.plotting.WindRoseDisplay.assign_to_figure_axis.html#act.plotting.WindRoseDisplay.assign_to_figure_axis" title="act.plotting.WindRoseDisplay.assign_to_figure_axis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assign_to_figure_axis</span></code></a>(fig, ax)</p></td>
 <td><p>This assigns the Display to a specific figure and axis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.plotting.WindRoseDisplay.plot.html#act.plotting.WindRoseDisplay.plot" title="act.plotting.WindRoseDisplay.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>(dir_field, spd_field[, dsname, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.plotting.WindRoseDisplay.plot.html#act.plotting.WindRoseDisplay.plot" title="act.plotting.WindRoseDisplay.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>(dir_field, spd_field[, dsname, ...])</p></td>
 <td><p>Makes the wind rose plot from the given dataset.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="act.plotting.WindRoseDisplay.put_display_in_subplot.html#act.plotting.WindRoseDisplay.put_display_in_subplot" title="act.plotting.WindRoseDisplay.put_display_in_subplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">put_display_in_subplot</span></code></a>(display, subplot_index)</p></td>
@@ -269,50 +173,44 @@ to this class.</p>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="act.plotting.WindRoseDisplay.add_colorbar.html" class="btn btn-neutral float-right" title="act.plotting.WindRoseDisplay.add_colorbar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="act.plotting.TimeSeriesDisplay.time_height_scatter.html" class="btn btn-neutral float-left" title="act.plotting.TimeSeriesDisplay.time_height_scatter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="act.plotting.WindRoseDisplay.add_colorbar.html" class="btn btn-neutral float-right" title="act.plotting.WindRoseDisplay.add_colorbar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2018, ACT Developers.
-
-    </p>
+    <p>&#169; Copyright 2018, ACT Developers.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YN80YZDD8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  
-  
-    
-   
+      gtag('config', 'G-8YN80YZDD8', {
+          'anonymize_ip': false,
+      });
+    </script> 
 
 </body>
 </html>

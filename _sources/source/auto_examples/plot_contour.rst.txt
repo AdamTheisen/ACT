@@ -25,13 +25,14 @@ Example for plotting up a contour plot
 This is an example of how to prepare
 and plot data for a contour plot
 
-.. GENERATED FROM PYTHON SOURCE LINES 10-37
+.. GENERATED FROM PYTHON SOURCE LINES 10-46
 
 
 
-.. image:: /source/auto_examples/images/sphx_glr_plot_contour_001.png
-    :alt: plot contour
-    :class: sphx-glr-single-img
+.. image-sg:: /source/auto_examples/images/sphx_glr_plot_contour_001.png
+   :alt: plot contour
+   :srcset: /source/auto_examples/images/sphx_glr_plot_contour_001.png
+   :class: sphx-glr-single-img
 
 
 
@@ -40,9 +41,11 @@ and plot data for a contour plot
 .. code-block:: default
 
 
-    import act
     import glob
+
     import matplotlib.pyplot as plt
+
+    import act
 
     files = glob.glob(act.tests.sample_files.EXAMPLE_MET_CONTOUR)
     time = '2019-05-08T04:00:00.000000000'
@@ -54,23 +57,30 @@ and plot data for a contour plot
         obj = act.io.armfiles.read_netcdf(f)
         data.update({f: obj})
         fields.update({f: ['lon', 'lat', 'temp_mean']})
-        wind_fields.update({f: ['lon', 'lat',
-                                'wspd_vec_mean', 'wdir_vec_mean']})
-        station_fields.update({f: ['lon', 'lat', 'temp_mean',
-                                   'atmos_pressure', 'vapor_pressure_mean',
-                                   'rh_mean']})
+        wind_fields.update({f: ['lon', 'lat', 'wspd_vec_mean', 'wdir_vec_mean']})
+        station_fields.update(
+            {
+                f: [
+                    'lon',
+                    'lat',
+                    'temp_mean',
+                    'atmos_pressure',
+                    'vapor_pressure_mean',
+                    'rh_mean',
+                ]
+            }
+        )
 
     display = act.plotting.ContourDisplay(data, figsize=(8, 8))
     display.create_contour(fields=fields, time=time, levels=50)
-    display.plot_vectors_from_spd_dir(fields=wind_fields, time=time, mesh=True,
-                                      grid_delta=(0.1, 0.1))
+    display.plot_vectors_from_spd_dir(fields=wind_fields, time=time, mesh=True, grid_delta=(0.1, 0.1))
     display.plot_station(fields=station_fields, time=time, markersize=7, color='red')
     plt.show()
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.204 seconds)
+   **Total running time of the script:** ( 0 minutes  1.475 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_plot_contour.py:

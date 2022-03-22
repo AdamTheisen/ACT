@@ -7,137 +7,10 @@
 ACT Example Gallery
 ===================
 
-Different examples on how to read and visualize data using ACT are provided 
+Different examples on how to read and visualize data using ACT are provided
 here.
 
 
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to plot timeseries of ASOS data from Chicago O&#x27;Hare airport.">
-
-.. only:: html
-
- .. figure:: /source/auto_examples/images/thumb/sphx_glr_plot_asos_temp_thumb.png
-     :alt: Example on plotting timeseries of ASOS data
-
-     :ref:`sphx_glr_source_auto_examples_plot_asos_temp.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /source/auto_examples/plot_asos_temp
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to download and plot ceiliometer data from the SGP site over Oklahoma...">
-
-.. only:: html
-
- .. figure:: /source/auto_examples/images/thumb/sphx_glr_ceil_example_thumb.png
-     :alt: Example for looking at ceilometer data
-
-     :ref:`sphx_glr_source_auto_examples_ceil_example.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /source/auto_examples/ceil_example
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Simple example for querying the ARM DQR webservice and plotting up the results">
-
-.. only:: html
-
- .. figure:: /source/auto_examples/images/thumb/sphx_glr_plot_qc_thumb.png
-     :alt: Example on how to query the ARM DQR webservice
-
-     :ref:`sphx_glr_source_auto_examples_plot_qc.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /source/auto_examples/plot_qc
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Example of how to read in MET data and plot up daytime temperature averages using the add_solar...">
-
-.. only:: html
-
- .. figure:: /source/auto_examples/images/thumb/sphx_glr_plot_daytime_averages_thumb.png
-     :alt: Example on how to plot up daily daytime temperature averages
-
-     :ref:`sphx_glr_source_auto_examples_plot_daytime_averages.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /source/auto_examples/plot_daytime_averages
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Example of how to read in raw data from the mini-MPL and plot out the PPI by converting it to P...">
-
-.. only:: html
-
- .. figure:: /source/auto_examples/images/thumb/sphx_glr_plot_raw_minimpl_thumb.png
-     :alt: Example on how to read and plot a PPI from mini-MPL
-
-     :ref:`sphx_glr_source_auto_examples_plot_raw_minimpl.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /source/auto_examples/plot_raw_minimpl
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to make a Skew-T plot from a sounding and calculate stability indicies. ...">
-
-.. only:: html
-
- .. figure:: /source/auto_examples/images/thumb/sphx_glr_plot_skewt_thumb.png
-     :alt: Example on how to plot a Skew-T plot of a sounding
-
-     :ref:`sphx_glr_source_auto_examples_plot_skewt.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /source/auto_examples/plot_skewt
 
 .. raw:: html
 
@@ -162,6 +35,111 @@ here.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to download and plot ceiliometer data from the SGP site over Oklahoma...">
+
+.. only:: html
+
+ .. figure:: /source/auto_examples/images/thumb/sphx_glr_ceil_example_thumb.png
+     :alt: Example for looking at ceilometer data
+
+     :ref:`sphx_glr_source_auto_examples_ceil_example.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /source/auto_examples/ceil_example
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to plot timeseries of ASOS data from Chicago O&#x27;Hare airport.">
+
+.. only:: html
+
+ .. figure:: /source/auto_examples/images/thumb/sphx_glr_plot_asos_temp_thumb.png
+     :alt: Example on plotting timeseries of ASOS data
+
+     :ref:`sphx_glr_source_auto_examples_plot_asos_temp.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /source/auto_examples/plot_asos_temp
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Simple example for querying the ARM DQR webservice and plotting up the results">
+
+.. only:: html
+
+ .. figure:: /source/auto_examples/images/thumb/sphx_glr_plot_qc_thumb.png
+     :alt: Example on how to query the ARM DQR webservice
+
+     :ref:`sphx_glr_source_auto_examples_plot_qc.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /source/auto_examples/plot_qc
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example of how to read in raw data from the mini-MPL and plot out the PPI by converting it to P...">
+
+.. only:: html
+
+ .. figure:: /source/auto_examples/images/thumb/sphx_glr_plot_raw_minimpl_thumb.png
+     :alt: Example on how to read and plot a PPI from mini-MPL
+
+     :ref:`sphx_glr_source_auto_examples_plot_raw_minimpl.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /source/auto_examples/plot_raw_minimpl
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Example of how to read in MET data and plot up daytime temperature averages using the add_solar...">
+
+.. only:: html
+
+ .. figure:: /source/auto_examples/images/thumb/sphx_glr_plot_daytime_averages_thumb.png
+     :alt: Example on how to plot up daily daytime temperature averages
+
+     :ref:`sphx_glr_source_auto_examples_plot_daytime_averages.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /source/auto_examples/plot_daytime_averages
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="This is a simple example for how to plot a timeseries of sounding data from the ARM SGP site.">
 
 .. only:: html
@@ -180,6 +158,27 @@ here.
    :hidden:
 
    /source/auto_examples/plot_sonde
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to make a Skew-T plot from a sounding and calculate stability indicies. ...">
+
+.. only:: html
+
+ .. figure:: /source/auto_examples/images/thumb/sphx_glr_plot_skewt_thumb.png
+     :alt: Example on how to plot a Skew-T plot of a sounding
+
+     :ref:`sphx_glr_source_auto_examples_plot_skewt.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /source/auto_examples/plot_skewt
 
 .. raw:: html
 

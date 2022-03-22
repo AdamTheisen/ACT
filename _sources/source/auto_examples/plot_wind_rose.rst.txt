@@ -25,13 +25,14 @@ Example on how to plot winds and relative humidity from sounding data
 This is an example of how to display wind rose and barb timeseries
 from multiple days worth of sounding data.
 
-.. GENERATED FROM PYTHON SOURCE LINES 10-35
+.. GENERATED FROM PYTHON SOURCE LINES 10-36
 
 
 
-.. image:: /source/auto_examples/images/sphx_glr_plot_wind_rose_001.png
-    :alt: act_datastream on 20060119, sonde_darwin on 20060119
-    :class: sphx-glr-single-img
+.. image-sg:: /source/auto_examples/images/sphx_glr_plot_wind_rose_001.png
+   :alt: act_datastream on 20060119, sonde_darwin on 20060119
+   :srcset: /source/auto_examples/images/sphx_glr_plot_wind_rose_001.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -40,8 +41,8 @@ from multiple days worth of sounding data.
 
  .. code-block:: none
 
-    /home/travis/build/ARM-DOE/ACT/act/plotting/plot.py:82: UserWarning: Could not discern datastreamname and dict or tuple were not provided. Using defaultname of act_datastream!
-      "name of act_datastream!"), UserWarning)
+    /home/runner/work/ACT/ACT/act/plotting/plot.py:80: UserWarning: Could not discern datastreamname and dict or tuple were not provided. Using defaultname of act_datastream!
+      warnings.warn(
 
 
 
@@ -53,35 +54,36 @@ from multiple days worth of sounding data.
 .. code-block:: default
 
 
-    import act
     import numpy as np
-
     from matplotlib import pyplot as plt
 
-    sonde_ds = act.io.armfiles.read_netcdf(
-        act.tests.sample_files.EXAMPLE_TWP_SONDE_WILDCARD)
+    import act
+
+    sonde_ds = act.io.armfiles.read_netcdf(act.tests.sample_files.EXAMPLE_TWP_SONDE_WILDCARD)
 
     WindDisplay = act.plotting.WindRoseDisplay(sonde_ds, figsize=(8, 10), subplot_shape=(2,))
-    WindDisplay.plot('deg', 'wspd',
-                     spd_bins=np.linspace(0, 25, 5), num_dirs=30,
-                     tick_interval=2, subplot_index=(0,))
+    WindDisplay.plot(
+        'deg',
+        'wspd',
+        spd_bins=np.linspace(0, 25, 5),
+        num_dirs=30,
+        tick_interval=2,
+        subplot_index=(0,),
+    )
 
 
-    BarbDisplay = act.plotting.TimeSeriesDisplay(
-        {'sonde_darwin': sonde_ds}, figsize=(10, 5))
+    BarbDisplay = act.plotting.TimeSeriesDisplay({'sonde_darwin': sonde_ds}, figsize=(10, 5))
     WindDisplay.put_display_in_subplot(BarbDisplay, subplot_index=(1,))
-    BarbDisplay.plot_time_height_xsection_from_1d_data('rh', 'pres',
-                                                       cmap='coolwarm_r',
-                                                       vmin=0, vmax=100,
-                                                       num_time_periods=25)
-    BarbDisplay.plot_barbs_from_spd_dir('deg', 'wspd', 'pres',
-                                        num_barbs_x=20)
+    BarbDisplay.plot_time_height_xsection_from_1d_data(
+        'rh', 'pres', cmap='coolwarm_r', vmin=0, vmax=100, num_time_periods=25
+    )
+    BarbDisplay.plot_barbs_from_spd_dir('deg', 'wspd', 'pres', num_barbs_x=20)
     plt.show()
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.915 seconds)
+   **Total running time of the script:** ( 0 minutes  2.594 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_plot_wind_rose.py:

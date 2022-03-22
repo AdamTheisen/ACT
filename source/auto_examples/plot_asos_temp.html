@@ -1,86 +1,45 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Example on plotting timeseries of ASOS data &mdash; Atmospheric data Community Toolkit 1.0.3.post20+g1500263 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/gallery-dataframe.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/gallery-rendered-html.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>Example on plotting timeseries of ASOS data &mdash; Atmospheric data Community Toolkit 0.post1+g62882fd documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery-binder.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery-dataframe.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery-rendered-html.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Example for looking at ceilometer data" href="ceil_example.html" />
-    <link rel="prev" title="ACT Example Gallery" href="index.html" /> 
+    <link rel="next" title="Example on how to query the ARM DQR webservice" href="plot_qc.html" />
+    <link rel="prev" title="Example for looking at ceilometer data" href="ceil_example.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../index.html" class="icon icon-home"> Atmospheric data Community Toolkit
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                1.0.3.post20+g1500263
+                0.post1+g62882fd
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -88,33 +47,21 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CREATING_ENVIRONMENTS.html">Setting up an Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">ACT Example Gallery</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Example on plotting timeseries of ASOS data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ceil_example.html">Example for looking at ceilometer data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_qc.html">Example on how to query the ARM DQR webservice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_daytime_averages.html">Example on how to plot up daily daytime temperature averages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_raw_minimpl.html">Example on how to read and plot a PPI from mini-MPL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_skewt.html">Example on how to plot a Skew-T plot of a sounding</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_rh_timeseries.html">Example on how to plot winds and relative humidity from sounding data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ceil_example.html">Example for looking at ceilometer data</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Example on plotting timeseries of ASOS data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_qc.html">Example on how to query the ARM DQR webservice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_raw_minimpl.html">Example on how to read and plot a PPI from mini-MPL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_daytime_averages.html">Example on how to plot up daily daytime temperature averages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_sonde.html">Example on how to plot a timeseries of sounding data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_skewt.html">Example on how to plot a Skew-T plot of a sounding</a></li>
 <li class="toctree-l2"><a class="reference internal" href="correct_ship_wind_data.html">Example on how to correct wind data for ship motion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_wind_rose.html">Example on how to plot winds and relative humidity from sounding data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_contour.html">Example for plotting up a contour plot</a></li>
@@ -140,73 +87,31 @@
 <li class="toctree-l1"><a class="reference external" href="https://github.com/ARM-DOE/ACT/issues">GitHub Issue Tracker</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Atmospheric data Community Toolkit</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">ACT Example Gallery</a> &raquo;</li>
-        
       <li>Example on plotting timeseries of ASOS data</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/source/auto_examples/plot_asos_temp.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
 <p>Click <a class="reference internal" href="#sphx-glr-download-source-auto-examples-plot-asos-temp-py"><span class="std std-ref">here</span></a>
@@ -216,33 +121,33 @@ to download the full example code</p>
 <span id="sphx-glr-source-auto-examples-plot-asos-temp-py"></span><h1>Example on plotting timeseries of ASOS data<a class="headerlink" href="#example-on-plotting-timeseries-of-asos-data" title="Permalink to this headline">¶</a></h1>
 <p>This example shows how to plot timeseries of ASOS data from
 Chicago O’Hare airport.</p>
-<img alt="act_datastream temp on 20200204, act_datastream on 20200204" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_asos_temp_001.png" />
-<p class="sphx-glr-script-out">Out:</p>
+<img src="../../_images/sphx_glr_plot_asos_temp_001.png" srcset="../../_images/sphx_glr_plot_asos_temp_001.png" alt="act_datastream temp on 20200204, act_datastream on 20200204" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Downloading: ORD
-/home/travis/build/ARM-DOE/ACT/act/plotting/plot.py:82: UserWarning: Could not discern datastreamname and dict or tuple were not provided. Using defaultname of act_datastream!
-  &quot;name of act_datastream!&quot;), UserWarning)
+/home/runner/work/ACT/ACT/act/plotting/plot.py:80: UserWarning: Could not discern datastreamname and dict or tuple were not provided. Using defaultname of act_datastream!
+  warnings.warn(
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">act</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <a href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="datetime.datetime" class="sphx-glr-backref-module-datetime sphx-glr-backref-type-py-class"><span class="n">datetime</span></a>
+
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <a href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="datetime.datetime" class="sphx-glr-backref-module-datetime sphx-glr-backref-type-py-class"><span class="n">datetime</span></a>
-<a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time_window</span></a> <span class="o">=</span> <span class="p">[</span><a href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="datetime.datetime" class="sphx-glr-backref-module-datetime sphx-glr-backref-type-py-class"><span class="n">datetime</span></a><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <a href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="datetime.datetime" class="sphx-glr-backref-module-datetime sphx-glr-backref-type-py-class"><span class="n">datetime</span></a><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]</span>
-<a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">station</span></a> <span class="o">=</span> <span class="s2">&quot;KORD&quot;</span>
-<a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">my_asoses</span></a> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">get_asos</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time_window</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">station</span></a><span class="o">=</span><span class="s2">&quot;ORD&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">act</span>
 
-<span class="n">my_disp</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">TimeSeriesDisplay</span><span class="p">(</span>
-    <a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">my_asoses</span></a><span class="p">[</span><span class="s1">&#39;ORD&#39;</span><span class="p">],</span> <span class="n">subplot_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="p">),</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">my_disp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;temp&#39;</span><span class="p">,</span> <span class="n">subplot_index</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">))</span>
-<span class="n">my_disp</span><span class="o">.</span><span class="n">plot_barbs_from_u_v</span><span class="p">(</span><span class="n">u_field</span><span class="o">=</span><span class="s1">&#39;u&#39;</span><span class="p">,</span> <span class="n">v_field</span><span class="o">=</span><span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="n">subplot_index</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">))</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time_window</span></a> <span class="o">=</span> <span class="p">[</span><a href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="datetime.datetime" class="sphx-glr-backref-module-datetime sphx-glr-backref-type-py-class"><span class="n">datetime</span></a><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <a href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="datetime.datetime" class="sphx-glr-backref-module-datetime sphx-glr-backref-type-py-class"><span class="n">datetime</span></a><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">station</span></a> <span class="o">=</span> <span class="s1">&#39;KORD&#39;</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">my_asoses</span></a> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">get_asos</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time_window</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">station</span></a><span class="o">=</span><span class="s1">&#39;ORD&#39;</span><span class="p">)</span>
+
+<span class="n">my_disp</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">TimeSeriesDisplay</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">my_asoses</span></a><span class="p">[</span><span class="s1">&#39;ORD&#39;</span><span class="p">],</span> <span class="n">subplot_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,),</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">my_disp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;temp&#39;</span><span class="p">,</span> <span class="n">subplot_index</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,))</span>
+<span class="n">my_disp</span><span class="o">.</span><span class="n">plot_barbs_from_u_v</span><span class="p">(</span><span class="n">u_field</span><span class="o">=</span><span class="s1">&#39;u&#39;</span><span class="p">,</span> <span class="n">v_field</span><span class="o">=</span><span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="n">subplot_index</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
 <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">my_disp</span><span class="o">.</span><span class="n">axes</span></a><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  28.992 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  18.299 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-source-auto-examples-plot-asos-temp-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/2614a1fc98c775779340c608558cae8f/plot_asos_temp.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_asos_temp.py</span></code></a></p>
@@ -256,50 +161,44 @@ Chicago O’Hare airport.</p>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="ceil_example.html" class="btn btn-neutral float-right" title="Example for looking at ceilometer data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="index.html" class="btn btn-neutral float-left" title="ACT Example Gallery" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ceil_example.html" class="btn btn-neutral float-left" title="Example for looking at ceilometer data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="plot_qc.html" class="btn btn-neutral float-right" title="Example on how to query the ARM DQR webservice" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2018, ACT Developers.
-
-    </p>
+    <p>&#169; Copyright 2018, ACT Developers.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YN80YZDD8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  
-  
-    
-   
+      gtag('config', 'G-8YN80YZDD8', {
+          'anonymize_ip': false,
+      });
+    </script> 
 
 </body>
 </html>

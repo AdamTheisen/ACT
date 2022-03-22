@@ -26,13 +26,14 @@ and plotting up the results
 
 Author: Adam Theisen
 
-.. GENERATED FROM PYTHON SOURCE LINES 10-33
+.. GENERATED FROM PYTHON SOURCE LINES 10-34
 
 
 
-.. image:: /source/auto_examples/images/sphx_glr_plot_qc_001.png
-    :alt: maraosmetM1.a1 temperature_ambient on 20180201
-    :class: sphx-glr-single-img
+.. image-sg:: /source/auto_examples/images/sphx_glr_plot_qc_001.png
+   :alt: maraosmetM1.a1 temperature_ambient on 20180201
+   :srcset: /source/auto_examples/images/sphx_glr_plot_qc_001.png
+   :class: sphx-glr-single-img
 
 
 
@@ -42,8 +43,9 @@ Author: Adam Theisen
 
 
 
-    import act
     from matplotlib import pyplot as plt
+
+    import act
 
     # Read in sample AOSMET data
     files = act.tests.sample_files.EXAMPLE_AOSMET
@@ -67,7 +69,7 @@ Author: Adam Theisen
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.429 seconds)
+   **Total running time of the script:** ( 0 minutes  0.663 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_plot_qc.py:

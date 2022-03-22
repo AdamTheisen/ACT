@@ -1,86 +1,45 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>act.io.WriteDataset &mdash; Atmospheric data Community Toolkit 1.0.3.post20+g1500263 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/gallery-dataframe.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/gallery-rendered-html.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>act.io.WriteDataset &mdash; Atmospheric data Community Toolkit 0.post1+g62882fd documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery-binder.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery-dataframe.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery-rendered-html.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="act.io.WriteDataset.write_netcdf" href="act.io.WriteDataset.write_netcdf.html" />
     <link rel="prev" title="act.io" href="act.io.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../index.html" class="icon icon-home"> Atmospheric data Community Toolkit
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                1.0.3.post20+g1500263
+                0.post1+g62882fd
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -88,23 +47,11 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CREATING_ENVIRONMENTS.html">Setting up an Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../source/auto_examples/index.html">ACT Example Gallery</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">API Reference Manual</a><ul class="current">
@@ -125,8 +72,12 @@
 <li class="toctree-l3"><a class="reference internal" href="act.io.read_gml_met.html">act.io.read_gml_met</a></li>
 <li class="toctree-l3"><a class="reference internal" href="act.io.read_gml_ozone.html">act.io.read_gml_ozone</a></li>
 <li class="toctree-l3"><a class="reference internal" href="act.io.read_gml_radiation.html">act.io.read_gml_radiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.io.read_hk_file.html">act.io.read_hk_file</a></li>
 <li class="toctree-l3"><a class="reference internal" href="act.io.read_netcdf.html">act.io.read_netcdf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.io.read_psl_wind_profiler.html">act.io.read_psl_wind_profiler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="act.io.read_sigma_mplv5.html">act.io.read_sigma_mplv5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.io.read_sp2.html">act.io.read_sp2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.io.read_sp2_dat.html">act.io.read_sp2_dat</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="act.plotting.html">act.plotting</a></li>
@@ -147,80 +98,37 @@
 <li class="toctree-l1"><a class="reference external" href="https://github.com/ARM-DOE/ACT/issues">GitHub Issue Tracker</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Atmospheric data Community Toolkit</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../index.html">API Reference Manual</a> &raquo;</li>
-        
           <li><a href="act.io.html">act.io</a> &raquo;</li>
-        
       <li>act.io.WriteDataset</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/API/generated/act.io.WriteDataset.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <section id="act-io-writedataset">
 <h1>act.io.WriteDataset<a class="headerlink" href="#act-io-writedataset" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="act.io.WriteDataset">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">act.io.</span></span><span class="sig-name descname"><span class="pre">WriteDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xarray_obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/act/io/armfiles.html#WriteDataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#act.io.WriteDataset" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">act.io.</span></span><span class="sig-name descname"><span class="pre">WriteDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xarray_obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/act/io/armfiles.html#WriteDataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#act.io.WriteDataset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for cleaning up Dataset before writing to file.</p>
 </dd></dl>
 
@@ -230,8 +138,8 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.io.WriteDataset.write_netcdf.html#act.io.WriteDataset.write_netcdf" title="act.io.WriteDataset.write_netcdf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_netcdf</span></code></a>([cleanup_global_atts, …])</p></td>
-<td><p>This is a wrapper around Dataset.to_netcdf to clean up the Dataset before writing to disk.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.io.WriteDataset.write_netcdf.html#act.io.WriteDataset.write_netcdf" title="act.io.WriteDataset.write_netcdf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_netcdf</span></code></a>([cleanup_global_atts, ...])</p></td>
+<td><p>This is a wrapper around Dataset.to_netcdf to clean up the Dataset before writing to disk. Some things are added to global attributes during ACT reading process, and QC variables attributes are modified during QC cleanup process. This will modify before writing to disk to better match Climate &amp; Forecast standards. :Parameters: * <strong>cleanup_global_atts</strong> (<em>boolean</em>) -- Option to cleanup global attributes by removing any global attribute                that starts with an underscore. * <strong>cleanup_qc_atts</strong> (<em>boolean</em>) -- Option to convert attributes that would be written as string array                to be a single character string. CF 1.7 does not allow string attribures. Will use a single space a delimeter between values and join_char to replace                white space between words. * <strong>join_char</strong> (<em>str</em>) -- The character sting to use for replacing white spaces between words when converting                a list of strings to single character string attributes. * <strong>make_copy</strong> (<em>boolean</em>) -- Make a copy before modifying Dataset to write. For large Datasets this                may add processing time and memory. If modifying the Dataset is OK                try setting to False. * <strong>cf_compliant</strong> (<em>boolean</em>) -- Option to output file with additional attributes to make file Climate &amp; Forecast                complient. May require runing .clean.cleanup() method on the object to fix other                issues first. This does the best it can but it may not be truely complient. You                should read the CF documents and try to make complient before writing to file. * <strong>delete_global_attrs</strong> (<em>list</em>) -- Optional global attributes to be deleted. Defaults to some standard                QC attributes that are not needed. Can add more or set to None to not                remove the attributes. * <strong>FillValue</strong> (<em>int, float</em>) -- The value to use as a _FillValue in output file. This is used to fix                issues with how Xarray handles missing_value upon reading. It's confusing                so not a perfect fix. Set to None to leave Xarray to do what it wants. Set to a value to be the value used as _FillValue in the file and data                array. This should then remove missing_value attribute from the file as well. * <strong>cf_convention</strong> (<em>str</em>) -- The Climate and Forecast convention string to add to Conventions attribute. * <strong>**kwargs</strong> (<em>keywords</em>) -- Keywords to pass through to Dataset.to_netcdf().</p></td>
 </tr>
 </tbody>
 </table>
@@ -239,50 +147,44 @@
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="act.io.WriteDataset.write_netcdf.html" class="btn btn-neutral float-right" title="act.io.WriteDataset.write_netcdf" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="act.io.html" class="btn btn-neutral float-left" title="act.io" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="act.io.WriteDataset.write_netcdf.html" class="btn btn-neutral float-right" title="act.io.WriteDataset.write_netcdf" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2018, ACT Developers.
-
-    </p>
+    <p>&#169; Copyright 2018, ACT Developers.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YN80YZDD8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  
-  
-    
-   
+      gtag('config', 'G-8YN80YZDD8', {
+          'anonymize_ip': false,
+      });
+    </script> 
 
 </body>
 </html>

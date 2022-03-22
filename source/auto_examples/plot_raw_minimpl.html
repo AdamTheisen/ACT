@@ -1,86 +1,45 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Example on how to read and plot a PPI from mini-MPL &mdash; Atmospheric data Community Toolkit 1.0.3.post20+g1500263 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/gallery-dataframe.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/gallery-rendered-html.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>Example on how to read and plot a PPI from mini-MPL &mdash; Atmospheric data Community Toolkit 0.post1+g62882fd documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery-binder.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery-dataframe.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery-rendered-html.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Example on how to plot a Skew-T plot of a sounding" href="plot_skewt.html" />
-    <link rel="prev" title="Example on how to plot up daily daytime temperature averages" href="plot_daytime_averages.html" /> 
+    <link rel="next" title="Example on how to plot up daily daytime temperature averages" href="plot_daytime_averages.html" />
+    <link rel="prev" title="Example on how to query the ARM DQR webservice" href="plot_qc.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../index.html" class="icon icon-home"> Atmospheric data Community Toolkit
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                1.0.3.post20+g1500263
+                0.post1+g62882fd
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -88,33 +47,21 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CREATING_ENVIRONMENTS.html">Setting up an Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">ACT Example Gallery</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="plot_asos_temp.html">Example on plotting timeseries of ASOS data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ceil_example.html">Example for looking at ceilometer data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_qc.html">Example on how to query the ARM DQR webservice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_daytime_averages.html">Example on how to plot up daily daytime temperature averages</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Example on how to read and plot a PPI from mini-MPL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_skewt.html">Example on how to plot a Skew-T plot of a sounding</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_rh_timeseries.html">Example on how to plot winds and relative humidity from sounding data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ceil_example.html">Example for looking at ceilometer data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_asos_temp.html">Example on plotting timeseries of ASOS data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_qc.html">Example on how to query the ARM DQR webservice</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Example on how to read and plot a PPI from mini-MPL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_daytime_averages.html">Example on how to plot up daily daytime temperature averages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_sonde.html">Example on how to plot a timeseries of sounding data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_skewt.html">Example on how to plot a Skew-T plot of a sounding</a></li>
 <li class="toctree-l2"><a class="reference internal" href="correct_ship_wind_data.html">Example on how to correct wind data for ship motion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_wind_rose.html">Example on how to plot winds and relative humidity from sounding data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_contour.html">Example for plotting up a contour plot</a></li>
@@ -140,73 +87,31 @@
 <li class="toctree-l1"><a class="reference external" href="https://github.com/ARM-DOE/ACT/issues">GitHub Issue Tracker</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Atmospheric data Community Toolkit</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">ACT Example Gallery</a> &raquo;</li>
-        
       <li>Example on how to read and plot a PPI from mini-MPL</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/source/auto_examples/plot_raw_minimpl.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
 <p>Click <a class="reference internal" href="#sphx-glr-download-source-auto-examples-plot-raw-minimpl-py"><span class="std std-ref">here</span></a>
@@ -217,8 +122,7 @@ to download the full example code</p>
 <p>Example of how to read in raw data from the mini-MPL
 and plot out the PPI by converting it to PyART</p>
 <p>Author: Adam Theisen</p>
-<img alt="plot raw minimpl" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_raw_minimpl_001.png" />
-<p class="sphx-glr-script-out">Out:</p>
+<img src="../../_images/sphx_glr_plot_raw_minimpl_001.png" srcset="../../_images/sphx_glr_plot_raw_minimpl_001.png" alt="plot raw minimpl" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>## You are using the Python ARM Radar Toolkit (Py-ART), an open source
 ## library for working with weather radar data. Py-ART is partly
 ## supported by the U.S. Department of Energy as part of the Atmospheric
@@ -229,18 +133,21 @@ and plot out the PPI by converting it to PyART</p>
 ##
 ##     JJ Helmus and SM Collis, JORS 2016, doi: 10.5334/jors.119
 
-/home/travis/miniconda3/envs/testenv/lib/python3.7/site-packages/pyart/graph/radardisplay.py:104: UserWarning: RadarDisplay does not correct for moving platforms
+&lt;frozen importlib._bootstrap&gt;:283: DeprecationWarning: the load_module() method is deprecated and slated for removal in Python 3.12; use exec_module() instead
+/usr/share/miniconda3/envs/act-docs/lib/python3.10/site-packages/pyart/graph/radardisplay.py:102: UserWarning: RadarDisplay does not correct for moving platforms
   warnings.warn(&#39;RadarDisplay does not correct for moving platforms&#39;)
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">act</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="kn">import</span> <span class="nn">act</span>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">pyart</span>
+
     <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">PYART_AVAILABLE</span></a> <span class="o">=</span> <span class="kc">True</span>
 <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
     <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">PYART_AVAILABLE</span></a> <span class="o">=</span> <span class="kc">False</span>
@@ -250,17 +157,18 @@ and plot out the PPI by converting it to PyART</p>
 <span class="n">obj</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">read_sigma_mplv5</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">files</span></a><span class="p">)</span>
 
 <span class="c1"># Create a PyART Radar Object</span>
-<span class="n">radar</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">create_pyart_obj</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">azimuth</span><span class="o">=</span><span class="s1">&#39;azimuth_angle&#39;</span><span class="p">,</span> <span class="n">elevation</span><span class="o">=</span><span class="s1">&#39;elevation_angle&#39;</span><span class="p">,</span>
-                                   <span class="n">range_var</span><span class="o">=</span><span class="s1">&#39;range&#39;</span><span class="p">)</span>
+<span class="n">radar</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">create_pyart_obj</span><span class="p">(</span>
+    <span class="n">obj</span><span class="p">,</span> <span class="n">azimuth</span><span class="o">=</span><span class="s1">&#39;azimuth_angle&#39;</span><span class="p">,</span> <span class="n">elevation</span><span class="o">=</span><span class="s1">&#39;elevation_angle&#39;</span><span class="p">,</span> <span class="n">range_var</span><span class="o">=</span><span class="s1">&#39;range&#39;</span>
+<span class="p">)</span>
 
 <span class="c1"># Creat Plot Display</span>
 <span class="k">if</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">PYART_AVAILABLE</span></a><span class="p">:</span>
     <span class="n">display</span> <span class="o">=</span> <span class="n">pyart</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">RadarDisplay</span><span class="p">(</span><span class="n">radar</span><span class="p">)</span>
-    <span class="n">display</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;nrb_copol&#39;</span><span class="p">,</span> <span class="n">sweep</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">title_flag</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
-    <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;nrb_copol&#39;</span><span class="p">,</span> <span class="n">sweep</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">title_flag</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.544 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.614 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-source-auto-examples-plot-raw-minimpl-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/63bd91ff1b595bdac6286bd9bcab6136/plot_raw_minimpl.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_raw_minimpl.py</span></code></a></p>
@@ -274,50 +182,44 @@ and plot out the PPI by converting it to PyART</p>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="plot_skewt.html" class="btn btn-neutral float-right" title="Example on how to plot a Skew-T plot of a sounding" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="plot_daytime_averages.html" class="btn btn-neutral float-left" title="Example on how to plot up daily daytime temperature averages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="plot_qc.html" class="btn btn-neutral float-left" title="Example on how to query the ARM DQR webservice" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="plot_daytime_averages.html" class="btn btn-neutral float-right" title="Example on how to plot up daily daytime temperature averages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2018, ACT Developers.
-
-    </p>
+    <p>&#169; Copyright 2018, ACT Developers.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YN80YZDD8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  
-  
-    
-   
+      gtag('config', 'G-8YN80YZDD8', {
+          'anonymize_ip': false,
+      });
+    </script> 
 
 </body>
 </html>
