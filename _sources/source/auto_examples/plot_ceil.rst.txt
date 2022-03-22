@@ -65,8 +65,8 @@ over Oklahoma.
     import os
 
     # Place your username and token here
-    username = os.getenv('ARM_USERNAME')
-    token = os.getenv('ARM_PASSWORD')
+    username = str(os.getenv('ARM_USERNAME'))
+    token = str(os.getenv('ARM_PASSWORD'))
 
     act.discovery.download_data(username, token, 'sgpceilC1.b1', '2017-01-14', '2017-01-19')
 
@@ -79,7 +79,7 @@ over Oklahoma.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  21.645 seconds)
+   **Total running time of the script:** ( 0 minutes  18.584 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_plot_ceil.py:
