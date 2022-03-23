@@ -59,27 +59,6 @@ on GitHub.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to download and plot ceiliometer data from the SGP site over Oklahoma...">
-
-.. only:: html
-
- .. figure:: /source/auto_examples/images/thumb/sphx_glr_plot_ceil_thumb.png
-     :alt: Simple plot of 2D data
-
-     :ref:`sphx_glr_source_auto_examples_plot_ceil.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /source/auto_examples/plot_ceil
-
-.. raw:: html
-
     <div class="sphx-glr-thumbcontainer" tooltip="Simple example for querying the ARM DQR webservice and plotting up the results">
 
 .. only:: html
@@ -224,6 +203,27 @@ on GitHub.
    :hidden:
 
    /source/auto_examples/plot_wind_rose
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to download and plot ceiliometer data from the SGP site over Oklahoma...">
+
+.. only:: html
+
+ .. figure:: /source/auto_examples/images/thumb/sphx_glr_plot_ceil_thumb.png
+     :alt: Simple plot of 2D data
+
+     :ref:`sphx_glr_source_auto_examples_plot_ceil.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /source/auto_examples/plot_ceil
 
 .. raw:: html
 

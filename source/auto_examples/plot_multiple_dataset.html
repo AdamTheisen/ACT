@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plot multiple datasets &mdash; Atmospheric data Community Toolkit 0.post1+g410ff3d documentation</title>
+  <title>Plot multiple datasets &mdash; Atmospheric data Community Toolkit 0.post1+gf6b2d52 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
@@ -38,7 +38,7 @@
             <a href="../../index.html" class="icon icon-home"> Atmospheric data Community Toolkit
           </a>
               <div class="version">
-                0.post1+g410ff3d
+                0.post1+gf6b2d52
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -57,7 +57,6 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">ACT Example Gallery</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="plot_rh_timeseries.html">Plot winds and relative humidity from sounding data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_asos_temp.html">Query and plot ASOS data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_ceil.html">Simple plot of 2D data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_qc.html">Query the ARM DQR webservice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_raw_minimpl.html">Read and plot a PPI from raw mini-MPL data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_daytime_averages.html">Calculate and plot daily daytime temperature averages</a></li>
@@ -65,6 +64,7 @@
 <li class="toctree-l2"><a class="reference internal" href="plot_skewt.html">Skew-T plot of a sounding</a></li>
 <li class="toctree-l2"><a class="reference internal" href="correct_ship_wind_data.html">Correct wind data for ship motion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_wind_rose.html">Windrose and windbarb timeseries plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_ceil.html">Simple plot of 2D data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_contour.html">Spatial contour plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_xsection.html">Multidimensional cross sections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get_stability_indices_example.html">Retrieve stability indicies from a sounding</a></li>
@@ -152,14 +152,20 @@ plot multiple datasets at a time.</p>
 <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a> <span class="o">=</span> <a href="https://docs.python.org/3/library/os.html#os.getenv" title="os.getenv" class="sphx-glr-backref-module-os sphx-glr-backref-type-py-function"><span class="n">os</span><span class="o">.</span><span class="n">getenv</span></a><span class="p">(</span><span class="s1">&#39;ARM_USERNAME&#39;</span><span class="p">)</span>
 <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a> <span class="o">=</span> <a href="https://docs.python.org/3/library/os.html#os.getenv" title="os.getenv" class="sphx-glr-backref-module-os sphx-glr-backref-type-py-function"><span class="n">os</span><span class="o">.</span><span class="n">getenv</span></a><span class="p">(</span><span class="s1">&#39;ARM_PASSWORD&#39;</span><span class="p">)</span>
 
-<span class="n">act</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">download_data</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a><span class="p">,</span> <span class="s1">&#39;sgpceilC1.b1&#39;</span><span class="p">,</span> <span class="s1">&#39;2019-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2019-01-07&#39;</span><span class="p">)</span>
+<span class="c1"># Get data from the web service if username and token are available</span>
+<span class="c1"># if not, use test data</span>
+<span class="k">if</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">ceil_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">armfiles</span><span class="o">.</span><span class="n">read_netcdf</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">act</span><span class="o">.</span><span class="n">tests</span><span class="o">.</span><span class="n">sample_files</span><span class="o">.</span><span class="n">EXAMPLE_CEIL1</span></a><span class="p">)</span>
+    <span class="n">met_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">armfiles</span><span class="o">.</span><span class="n">read_netcdf</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">act</span><span class="o">.</span><span class="n">tests</span><span class="o">.</span><span class="n">sample_files</span><span class="o">.</span><span class="n">EXAMPLE_MET1</span></a><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># Download and read data</span>
+    <span class="n">act</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">download_data</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a><span class="p">,</span> <span class="s1">&#39;sgpceilC1.b1&#39;</span><span class="p">,</span> <span class="s1">&#39;2019-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2019-01-07&#39;</span><span class="p">)</span>
+    <span class="n">ceil_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">armfiles</span><span class="o">.</span><span class="n">read_netcdf</span><span class="p">(</span><span class="s1">&#39;sgpceilC1.b1/sgpceilC1.b1.201901*.nc&#39;</span><span class="p">)</span>
+    <span class="n">met_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">armfiles</span><span class="o">.</span><span class="n">read_netcdf</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">act</span><span class="o">.</span><span class="n">tests</span><span class="o">.</span><span class="n">sample_files</span><span class="o">.</span><span class="n">EXAMPLE_MET_WILDCARD</span></a><span class="p">)</span>
 
 <span class="c1"># Read in CEIL data and correct it</span>
-<span class="n">ceil_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">armfiles</span><span class="o">.</span><span class="n">read_netcdf</span><span class="p">(</span><span class="s1">&#39;sgpceilC1.b1/sgpceilC1.b1.201901*.nc&#39;</span><span class="p">)</span>
 <span class="n">ceil_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">corrections</span><span class="o">.</span><span class="n">ceil</span><span class="o">.</span><span class="n">correct_ceil</span><span class="p">(</span><span class="n">ceil_ds</span><span class="p">,</span> <span class="o">-</span><span class="mf">9999.0</span><span class="p">)</span>
 
-<span class="c1"># Read in the MET data</span>
-<span class="n">met_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">armfiles</span><span class="o">.</span><span class="n">read_netcdf</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">act</span><span class="o">.</span><span class="n">tests</span><span class="o">.</span><span class="n">sample_files</span><span class="o">.</span><span class="n">EXAMPLE_MET_WILDCARD</span></a><span class="p">)</span>
 
 <span class="c1"># You can use tuples if the datasets in the tuple contain a</span>
 <span class="c1"># datastream attribute. This is required in all ARM datasets.</span>
@@ -183,7 +189,7 @@ plot multiple datasets at a time.</p>
 <span class="n">met_ds</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  40.160 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  42.631 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-source-auto-examples-plot-multiple-dataset-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/b9c08ebfc9891325f08389c6a6f52fd4/plot_multiple_dataset.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_multiple_dataset.py</span></code></a></p>
