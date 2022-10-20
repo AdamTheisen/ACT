@@ -86,6 +86,23 @@ on GitHub.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="This is a simple example for how to plot multiple columns in a TimeseriesDisplay.">
+
+.. only:: html
+
+  .. image:: /source/auto_examples/images/thumb/sphx_glr_plot_multiple_column_thumb.png
+    :alt: Plot a timeseries of sounding data
+
+  :ref:`sphx_glr_source_auto_examples_plot_multiple_column.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Plot a timeseries of sounding data</div>
+    </div>
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Example of how to read in MET data and plot up daytime temperature averages using the add_solar...">
 
 .. only:: html
@@ -137,23 +154,6 @@ on GitHub.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to calculate course and speed over ground of the ship and use it to corr...">
-
-.. only:: html
-
-  .. image:: /source/auto_examples/images/thumb/sphx_glr_plot_correct_ship_wind_data_thumb.png
-    :alt: Correct wind data for ship motion
-
-  :ref:`sphx_glr_source_auto_examples_plot_correct_ship_wind_data.py`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">Correct wind data for ship motion</div>
-    </div>
-
-
-.. raw:: html
-
     <div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to display wind rose and barb timeseries from multiple days worth of ...">
 
 .. only:: html
@@ -166,6 +166,23 @@ on GitHub.
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Windrose and windbarb timeseries plot</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to calculate course and speed over ground of the ship and use it to corr...">
+
+.. only:: html
+
+  .. image:: /source/auto_examples/images/thumb/sphx_glr_plot_correct_ship_wind_data_thumb.png
+    :alt: Correct wind data for ship motion
+
+  :ref:`sphx_glr_source_auto_examples_plot_correct_ship_wind_data.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Correct wind data for ship motion</div>
     </div>
 
 
@@ -470,11 +487,12 @@ on GitHub.
    /source/auto_examples/plot_asos_temp
    /source/auto_examples/plot_qc
    /source/auto_examples/plot_raw_minimpl
+   /source/auto_examples/plot_multiple_column
    /source/auto_examples/plot_daytime_averages
    /source/auto_examples/plot_sonde
    /source/auto_examples/plot_get_stability_indices_example
-   /source/auto_examples/plot_correct_ship_wind_data
    /source/auto_examples/plot_wind_rose
+   /source/auto_examples/plot_correct_ship_wind_data
    /source/auto_examples/plot_skewt
    /source/auto_examples/plot_dqr_qc
    /source/auto_examples/plot_ceil
