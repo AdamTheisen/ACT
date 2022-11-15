@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>act.io.armfiles &#8212; Atmospheric data Community Toolkit 0.post1+ga487820 documentation</title>
+    <title>act.io.armfiles &#8212; Atmospheric data Community Toolkit 0.post1+ga954c4e documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -222,12 +222,16 @@
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span><span class="p">,</span> <span class="n">PosixPath</span>
 <span class="kn">from</span> <span class="nn">netCDF4</span> <span class="kn">import</span> <span class="n">Dataset</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">PathLike</span>
+<span class="kn">import</span> <span class="nn">tarfile</span>
+<span class="kn">import</span> <span class="nn">tempfile</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 
 <span class="kn">import</span> <span class="nn">act.utils</span> <span class="k">as</span> <span class="nn">utils</span>
 <span class="kn">from</span> <span class="nn">act.config</span> <span class="kn">import</span> <span class="n">DEFAULT_DATASTREAM_NAME</span>
+<span class="kn">from</span> <span class="nn">act.utils.io_utils</span> <span class="kn">import</span> <span class="n">unpack_tar</span><span class="p">,</span> <span class="n">unpack_gzip</span><span class="p">,</span> <span class="n">cleanup_files</span><span class="p">,</span> <span class="n">is_gunzip_file</span>
 
 
 <div class="viewcode-block" id="read_netcdf"><a class="viewcode-back" href="../../../API/generated/act.io.read_netcdf.html#act.io.read_netcdf">[docs]</a><span class="k">def</span> <span class="nf">read_netcdf</span><span class="p">(</span>
@@ -286,7 +290,7 @@
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    act_obj : Object (or None)</span>
+<span class="sd">    obj : Object (or None)</span>
 <span class="sd">        ACT dataset (or None if no data file(s) found).</span>
 
 <span class="sd">    Examples</span>
@@ -300,7 +304,9 @@
 <span class="sd">        print(the_ds.attrs._datastream)</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="n">ds</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">filenames</span><span class="p">,</span> <span class="n">cleanup_temp_directory</span> <span class="o">=</span> <span class="n">check_if_tar_gz_file</span><span class="p">(</span><span class="n">filenames</span><span class="p">)</span>
 
     <span class="n">file_dates</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">file_times</span> <span class="o">=</span> <span class="p">[]</span>
@@ -478,6 +484,9 @@
     <span class="k">if</span> <span class="n">cleanup_qc</span><span class="p">:</span>
         <span class="n">ds</span><span class="o">.</span><span class="n">clean</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span>
 
+    <span class="k">if</span> <span class="n">cleanup_temp_directory</span><span class="p">:</span>
+        <span class="n">cleanup_files</span><span class="p">(</span><span class="n">files</span><span class="o">=</span><span class="n">filenames</span><span class="p">)</span>
+
     <span class="k">return</span> <span class="n">ds</span></div>
 
 
@@ -508,7 +517,7 @@
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    act_obj : list of str</span>
+<span class="sd">    obj : list of str</span>
 <span class="sd">        Variable names to exclude from returned Dataset by using drop_variables keyword</span>
 <span class="sd">        when calling Xarray.open_dataset().</span>
 
@@ -946,6 +955,117 @@
                 <span class="k">pass</span>
 
         <span class="n">write_obj</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="check_if_tar_gz_file"><a class="viewcode-back" href="../../../API/generated/act.io.check_if_tar_gz_file.html#act.io.check_if_tar_gz_file">[docs]</a><span class="k">def</span> <span class="nf">check_if_tar_gz_file</span><span class="p">(</span><span class="n">filenames</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Unpacks gunzip and/or TAR file contents and returns Xarray Dataset</span>
+
+<span class="sd">    ...</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filenames : str, pathlib.Path</span>
+<span class="sd">        Filenames to check if gunzip and/or tar files.</span>
+
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    filenames : Paths to extracted files from gunzip or TAR files</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">cleanup</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">filenames</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">PathLike</span><span class="p">)):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">is_gunzip_file</span><span class="p">(</span><span class="n">filenames</span><span class="p">)</span> <span class="ow">or</span> <span class="n">tarfile</span><span class="o">.</span><span class="n">is_tarfile</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">filenames</span><span class="p">)):</span>
+                <span class="n">tmpdirname</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">mkdtemp</span><span class="p">()</span>
+                <span class="n">cleanup</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">if</span> <span class="n">is_gunzip_file</span><span class="p">(</span><span class="n">filenames</span><span class="p">):</span>
+                    <span class="n">filenames</span> <span class="o">=</span> <span class="n">unpack_gzip</span><span class="p">(</span><span class="n">filenames</span><span class="p">,</span> <span class="n">write_directory</span><span class="o">=</span><span class="n">tmpdirname</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">tarfile</span><span class="o">.</span><span class="n">is_tarfile</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">filenames</span><span class="p">)):</span>
+                    <span class="n">filenames</span> <span class="o">=</span> <span class="n">unpack_tar</span><span class="p">(</span><span class="n">filenames</span><span class="p">,</span> <span class="n">write_directory</span><span class="o">=</span><span class="n">tmpdirname</span><span class="p">,</span> <span class="n">randomize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+    <span class="k">return</span> <span class="n">filenames</span><span class="p">,</span> <span class="n">cleanup</span></div>
+
+
+<div class="viewcode-block" id="read_mmcr"><a class="viewcode-back" href="../../../API/generated/act.io.read_mmcr.html#act.io.read_mmcr">[docs]</a><span class="k">def</span> <span class="nf">read_mmcr</span><span class="p">(</span><span class="n">filenames</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Reads in ARM MMCR files and splits up the variables into specific</span>
+<span class="sd">    mode variables based on what&#39;s in the files.  MMCR files have the modes</span>
+<span class="sd">    interleaved and are not readable using xarray so some modifications are</span>
+<span class="sd">    needed ahead of time.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filenames : str, pathlib.PosixPath or list of str</span>
+<span class="sd">        Name of file(s) to read.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    obj : Object (or None)</span>
+<span class="sd">        ACT dataset (or None if no data file(s) found).</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Sort the files to make sure they concatenate right</span>
+    <span class="n">filenames</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+    <span class="c1"># Run through each file and read it in using netCDF4, then</span>
+    <span class="c1"># read it in with xarray</span>
+    <span class="n">objs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
+        <span class="n">nc</span> <span class="o">=</span> <span class="n">Dataset</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span>
+        <span class="c1"># Change heights name to range to read appropriately to xarray</span>
+        <span class="k">if</span> <span class="s1">&#39;heights&#39;</span> <span class="ow">in</span> <span class="n">nc</span><span class="o">.</span><span class="n">dimensions</span><span class="p">:</span>
+            <span class="n">nc</span><span class="o">.</span><span class="n">renameDimension</span><span class="p">(</span><span class="s1">&#39;heights&#39;</span><span class="p">,</span> <span class="s1">&#39;range&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">nc</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">obj</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">backends</span><span class="o">.</span><span class="n">NetCDF4DataStore</span><span class="p">(</span><span class="n">nc</span><span class="p">))</span>
+            <span class="n">objs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+    <span class="c1"># Concatenate objects together</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">objs</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">objs</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">objs</span>
+
+    <span class="c1"># Get mdoes and ranges with time/height modes</span>
+    <span class="n">modes</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="s1">&#39;mode&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">mode_vars</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">obj</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s1">&#39;range&#39;</span> <span class="ow">in</span> <span class="n">obj</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">.</span><span class="n">dims</span> <span class="ow">and</span> <span class="s1">&#39;time&#39;</span> <span class="ow">in</span> <span class="n">obj</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">.</span><span class="n">dims</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">.</span><span class="n">dims</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">mode_vars</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+
+    <span class="c1"># For each mode, run extract data variables if available</span>
+    <span class="c1"># saves as individual variables in the file.</span>
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">modes</span><span class="p">:</span>
+        <span class="n">mode_desc</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="s1">&#39;ModeDescription&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">m</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="s1">&#39;heights&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="p">:])</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+            <span class="k">continue</span>
+        <span class="n">mode_desc</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">mode_desc</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">mode_desc</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">mode_desc</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="s1">&#39;ModeNum&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">==</span> <span class="n">m</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">range_data</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="s1">&#39;heights&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="p">:]</span>
+        <span class="n">idy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">range_data</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">mode_vars</span><span class="p">:</span>
+            <span class="n">new_var_name</span> <span class="o">=</span> <span class="n">v</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">mode_desc</span>
+            <span class="n">time_name</span> <span class="o">=</span> <span class="s1">&#39;time_&#39;</span> <span class="o">+</span> <span class="n">mode_desc</span>
+            <span class="n">range_name</span> <span class="o">=</span> <span class="s1">&#39;range_&#39;</span> <span class="o">+</span> <span class="n">mode_desc</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="p">:]</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span> <span class="n">idy</span><span class="p">]</span>
+            <span class="n">attrs</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span>
+            <span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span>
+                <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+                <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="n">time_name</span><span class="p">:</span> <span class="n">obj</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">range_name</span><span class="p">:</span> <span class="n">range_data</span><span class="p">[</span><span class="n">idy</span><span class="p">]},</span>
+                <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="n">time_name</span><span class="p">,</span> <span class="n">range_name</span><span class="p">],</span>
+                <span class="n">attrs</span><span class="o">=</span><span class="n">attrs</span>
+            <span class="p">)</span>
+            <span class="n">obj</span><span class="p">[</span><span class="n">new_var_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">da</span>
+
+    <span class="k">return</span> <span class="n">obj</span></div>
 </pre></div>
 <div class="section">
    
