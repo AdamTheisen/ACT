@@ -1,0 +1,14 @@
+
+:orphan:
+
+.. _sphx_glr_source_auto_examples_workflows_sg_execution_times:
+
+Computation times
+=================
+**00:44.826** total execution time for **source_auto_examples_workflows** files:
+
++--------------------------------------------------------------------------------------------------------+-----------+--------+
+| :ref:`sphx_glr_source_auto_examples_workflows_plot_multiple_dataset.py` (``plot_multiple_dataset.py``) | 00:37.419 | 0.0 MB |
++--------------------------------------------------------------------------------------------------------+-----------+--------+
+| :ref:`sphx_glr_source_auto_examples_workflows_plot_weighted_average.py` (``plot_weighted_average.py``) | 00:07.407 | 0.0 MB |
++--------------------------------------------------------------------------------------------------------+-----------+--------+
