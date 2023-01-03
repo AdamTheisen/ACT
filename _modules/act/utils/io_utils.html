@@ -5,21 +5,30 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>act.utils.io_utils &#8212; Atmospheric data Community Toolkit 0.post1+gd4a09ea documentation</title>
+    <title>act.utils.io_utils &#8212; Atmospheric data Community Toolkit 0.post1+g368a926 documentation</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-
+  
     
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <link rel="stylesheet"
+      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+</style>
+    
+      
+  
+    
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -30,13 +39,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/act-theme.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-
+    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/design-tabs.js"></script>
@@ -90,7 +100,7 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -220,7 +230,7 @@
 
 
 <div class="viewcode-block" id="pack_tar"><a class="viewcode-back" href="../../../API/generated/act.utils.pack_tar.html#act.utils.pack_tar">[docs]</a><span class="k">def</span> <span class="nf">pack_tar</span><span class="p">(</span><span class="n">filenames</span><span class="p">,</span> <span class="n">write_filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">write_directory</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">remove</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Creates TAR file from list of filenames provided. Currently only works with</span>
 <span class="sd">    all files existing in the same directory.</span>
 
@@ -280,7 +290,7 @@
 
 <div class="viewcode-block" id="unpack_tar"><a class="viewcode-back" href="../../../API/generated/act.utils.unpack_tar.html#act.utils.unpack_tar">[docs]</a><span class="k">def</span> <span class="nf">unpack_tar</span><span class="p">(</span><span class="n">tar_files</span><span class="p">,</span> <span class="n">write_directory</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">temp_dir</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">randomize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                <span class="n">return_files</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">remove</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Unpacks TAR file contents into provided base directory</span>
 
 <span class="sd">    ...</span>
@@ -354,7 +364,7 @@
 
 
 <div class="viewcode-block" id="cleanup_files"><a class="viewcode-back" href="../../../API/generated/act.utils.cleanup_files.html#act.utils.cleanup_files">[docs]</a><span class="k">def</span> <span class="nf">cleanup_files</span><span class="p">(</span><span class="n">dirname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Cleans up files and directory possibly created from unpacking TAR files with unpack_tar()</span>
 
 <span class="sd">    ...</span>
@@ -385,7 +395,7 @@
 
 
 <div class="viewcode-block" id="is_gunzip_file"><a class="viewcode-back" href="../../../API/generated/act.utils.is_gunzip_file.html#act.utils.is_gunzip_file">[docs]</a><span class="k">def</span> <span class="nf">is_gunzip_file</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Function to test if file is a gunzip file.</span>
 
 <span class="sd">    Parameters</span>
@@ -408,7 +418,7 @@
 
 
 <div class="viewcode-block" id="pack_gzip"><a class="viewcode-back" href="../../../API/generated/act.utils.pack_gzip.html#act.utils.pack_gzip">[docs]</a><span class="k">def</span> <span class="nf">pack_gzip</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">write_directory</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">remove</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Creates a gunzip file from a filename path</span>
 
 <span class="sd">    ...</span>
@@ -448,7 +458,7 @@
 
 
 <div class="viewcode-block" id="unpack_gzip"><a class="viewcode-back" href="../../../API/generated/act.utils.unpack_gzip.html#act.utils.unpack_gzip">[docs]</a><span class="k">def</span> <span class="nf">unpack_gzip</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">write_directory</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">remove</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Extracts file from a gunzip file.</span>
 
 <span class="sd">    ...</span>
@@ -504,9 +514,8 @@
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-<footer class="footer mt-5 mt-md-0">
+    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -517,7 +526,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
     </div>
     
