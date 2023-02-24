@@ -5,10 +5,10 @@
 
 Computation times
 =================
-**00:01.268** total execution time for **source_auto_examples_io** files:
+**00:01.574** total execution time for **source_auto_examples_io** files:
 
 +---------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_source_auto_examples_io_plot_icartt.py` (``plot_icartt.py``)           | 00:00.714 | 0.0 MB |
+| :ref:`sphx_glr_source_auto_examples_io_plot_icartt.py` (``plot_icartt.py``)           | 00:00.938 | 0.0 MB |
 +---------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_source_auto_examples_io_plot_raw_minimpl.py` (``plot_raw_minimpl.py``) | 00:00.554 | 0.0 MB |
+| :ref:`sphx_glr_source_auto_examples_io_plot_raw_minimpl.py` (``plot_raw_minimpl.py``) | 00:00.636 | 0.0 MB |
 +---------------------------------------------------------------------------------------+-----------+--------+
