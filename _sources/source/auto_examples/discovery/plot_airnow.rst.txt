@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_source_auto_examples_discovery_plot_airnow.py>`
+        :ref:`Go to the end <sphx_glr_download_source_auto_examples_discovery_plot_airnow.py>`
         to download the full example code
 
 .. rst-class:: sphx-glr-example-title
@@ -93,6 +93,8 @@ a station near to SGP
 .. only:: html
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
+
+
 
 
     .. container:: sphx-glr-download sphx-glr-download-python

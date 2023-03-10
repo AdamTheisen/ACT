@@ -3,12 +3,13 @@
 
 .. _sphx_glr_source_auto_examples_utils_sg_execution_times:
 
+
 Computation times
 =================
-**00:15.946** total execution time for **source_auto_examples_utils** files:
+**00:23.843** total execution time for **source_auto_examples_utils** files:
 
 +--------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_source_auto_examples_utils_plot_change_units.py` (``plot_change_units.py``) | 00:13.633 | 0.0 MB |
+| :ref:`sphx_glr_source_auto_examples_utils_plot_change_units.py` (``plot_change_units.py``) | 00:20.785 | 0.0 MB |
 +--------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_source_auto_examples_utils_plot_tar.py` (``plot_tar.py``)                   | 00:02.313 | 0.0 MB |
+| :ref:`sphx_glr_source_auto_examples_utils_plot_tar.py` (``plot_tar.py``)                   | 00:03.059 | 0.0 MB |
 +--------------------------------------------------------------------------------------------+-----------+--------+
