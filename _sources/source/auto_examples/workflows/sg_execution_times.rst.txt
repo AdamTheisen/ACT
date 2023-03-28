@@ -6,12 +6,12 @@
 
 Computation times
 =================
-**01:49.829** total execution time for **source_auto_examples_workflows** files:
+**01:23.434** total execution time for **source_auto_examples_workflows** files:
 
 +--------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_source_auto_examples_workflows_plot_multiple_dataset.py` (``plot_multiple_dataset.py``) | 00:53.202 | 0.0 MB |
+| :ref:`sphx_glr_source_auto_examples_workflows_plot_multiple_dataset.py` (``plot_multiple_dataset.py``) | 00:45.994 | 0.0 MB |
 +--------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_source_auto_examples_workflows_plot_merged_product.py` (``plot_merged_product.py``)     | 00:49.203 | 0.0 MB |
+| :ref:`sphx_glr_source_auto_examples_workflows_plot_merged_product.py` (``plot_merged_product.py``)     | 00:30.058 | 0.0 MB |
 +--------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_source_auto_examples_workflows_plot_weighted_average.py` (``plot_weighted_average.py``) | 00:07.425 | 0.0 MB |
+| :ref:`sphx_glr_source_auto_examples_workflows_plot_weighted_average.py` (``plot_weighted_average.py``) | 00:07.382 | 0.0 MB |
 +--------------------------------------------------------------------------------------------------------+-----------+--------+
