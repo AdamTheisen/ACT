@@ -187,6 +187,23 @@ Examples showing different ways to read and save data.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="This data shows how to read in SurfRad data from the urls and plot the data up in a time series">
+
+.. only:: html
+
+  .. image:: /source/auto_examples/io/images/thumb/sphx_glr_plot_surfrad_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_source_auto_examples_io_plot_surfrad.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Plot SurfRad Data</div>
+    </div>
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to read and display International Consortium for Atmospheric Research on...">
 
 .. only:: html
@@ -442,7 +459,7 @@ Examples showing different ways to visualize your data.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Compare MET temperature and RH using a heatmap">
+    <div class="sphx-glr-thumbcontainer" tooltip="Compare MET temperature and RH using a heatmap and scatter plot.">
 
 .. only:: html
 
@@ -459,7 +476,7 @@ Examples showing different ways to visualize your data.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Compare MET temperature and RH using a heatmap">
+    <div class="sphx-glr-thumbcontainer" tooltip="Example shows how to plot up CCN droplet count in a size distribution plot.  Also shows how to ...">
 
 .. only:: html
 
@@ -470,7 +487,7 @@ Examples showing different ways to visualize your data.
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Example plot using heat maps</div>
+      <div class="sphx-glr-thumbnail-title">Example Size Distribution Plots</div>
     </div>
 
 
