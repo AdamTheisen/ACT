@@ -6,14 +6,14 @@
 
 Computation times
 =================
-**01:16.503** total execution time for **source_auto_examples_discovery** files:
+**01:15.162** total execution time for **source_auto_examples_discovery** files:
 
 +--------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_source_auto_examples_discovery_plot_asos_temp.py` (``plot_asos_temp.py``)               | 00:43.247 | 0.0 MB |
+| :ref:`sphx_glr_source_auto_examples_discovery_plot_asos_temp.py` (``plot_asos_temp.py``)               | 00:44.206 | 0.0 MB |
 +--------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_source_auto_examples_discovery_plot_neon.py` (``plot_neon.py``)                         | 00:25.840 | 0.0 MB |
+| :ref:`sphx_glr_source_auto_examples_discovery_plot_neon.py` (``plot_neon.py``)                         | 00:23.547 | 0.0 MB |
 +--------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_source_auto_examples_discovery_plot_noaa_fmcw_moment.py` (``plot_noaa_fmcw_moment.py``) | 00:07.416 | 0.0 MB |
+| :ref:`sphx_glr_source_auto_examples_discovery_plot_noaa_fmcw_moment.py` (``plot_noaa_fmcw_moment.py``) | 00:07.408 | 0.0 MB |
 +--------------------------------------------------------------------------------------------------------+-----------+--------+
 | :ref:`sphx_glr_source_auto_examples_discovery_plot_airnow.py` (``plot_airnow.py``)                     | 00:00.001 | 0.0 MB |
 +--------------------------------------------------------------------------------------------------------+-----------+--------+
