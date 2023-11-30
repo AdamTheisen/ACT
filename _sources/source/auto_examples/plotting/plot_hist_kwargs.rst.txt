@@ -36,23 +36,10 @@ Author: Zachary Sherman
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /home/runner/work/ACT/ACT/examples/plotting/plot_hist_kwargs.py:17: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-      met_ds = act.io.armfiles.read_netcdf(files)
-    /home/runner/work/ACT/ACT/examples/plotting/plot_hist_kwargs.py:21: DeprecationWarning: HistogramDisplay will be retired in version 2.0.0.  Please use DistributionDisplay instead.
-      histdisplay = act.plotting.HistogramDisplay(met_ds)
 
 
 
-
-
-
-|
-
-.. code-block:: default
+.. code-block:: Python
 
 
     from matplotlib import pyplot as plt
@@ -61,19 +48,19 @@ Author: Zachary Sherman
     import act
 
     files = act.tests.sample_files.EXAMPLE_MET1
-    met_ds = act.io.armfiles.read_netcdf(files)
+    met_ds = act.io.arm.read_arm_netcdf(files)
 
     # Plot data
     hist_kwargs = {'range': (-10, 10)}
-    histdisplay = act.plotting.HistogramDisplay(met_ds)
-    histdisplay.plot_stacked_bar_graph('temp_mean', bins=np.arange(-40, 40, 5),
-                                       hist_kwargs=hist_kwargs)
+    histdisplay = act.plotting.DistributionDisplay(met_ds)
+    histdisplay.plot_stacked_bar('temp_mean', bins=np.arange(-40, 40, 5),
+                                 hist_kwargs=hist_kwargs)
     plt.show()
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.106 seconds)
+   **Total running time of the script:** (0 minutes 0.127 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_plotting_plot_hist_kwargs.py:
@@ -82,16 +69,13 @@ Author: Zachary Sherman
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_hist_kwargs.ipynb <plot_hist_kwargs.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_hist_kwargs.py <plot_hist_kwargs.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: plot_hist_kwargs.ipynb <plot_hist_kwargs.ipynb>`
 
 
 .. only:: html

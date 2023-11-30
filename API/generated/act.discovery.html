@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>act.discovery &#8212; Atmospheric data Community Toolkit 0.post1+g787314e documentation</title>
+    <title>act.discovery &#8212; Atmospheric data Community Toolkit 0.post1+g35d7dba documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -44,7 +44,7 @@
     <script src="../../_static/doc_shared.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="act.discovery.croptype" href="act.discovery.croptype.html" />
+    <link rel="next" title="act.discovery.download_arm_data" href="act.discovery.download_arm_data.html" />
     <link rel="prev" title="act.corrections.correct_wind" href="act.corrections.correct_wind.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -121,6 +121,12 @@
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../userguide/GUIDE_V2.html">
+  ACT Version 2 Release Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../userguide/index.html">
   User Guide
  </a>
@@ -236,13 +242,8 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="act.discovery.croptype.html">
-     act.discovery.croptype
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="act.discovery.download_data.html">
-     act.discovery.download_data
+    <a class="reference internal" href="act.discovery.download_arm_data.html">
+     act.discovery.download_arm_data
     </a>
    </li>
    <li class="toctree-l2">
@@ -256,8 +257,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="act.discovery.download_surfrad.html">
-     act.discovery.download_surfrad
+    <a class="reference internal" href="act.discovery.download_surfrad_data.html">
+     act.discovery.download_surfrad_data
     </a>
    </li>
    <li class="toctree-l2">
@@ -281,18 +282,23 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="act.discovery.get_asos.html">
-     act.discovery.get_asos
+    <a class="reference internal" href="act.discovery.get_asos_data.html">
+     act.discovery.get_asos_data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="act.discovery.get_product_avail.html">
-     act.discovery.get_product_avail
+    <a class="reference internal" href="act.discovery.get_crop_type.html">
+     act.discovery.get_crop_type
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="act.discovery.get_site_products.html">
-     act.discovery.get_site_products
+    <a class="reference internal" href="act.discovery.get_neon_product_avail.html">
+     act.discovery.get_neon_product_avail
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.discovery.get_neon_site_products.html">
+     act.discovery.get_neon_site_products
     </a>
    </li>
   </ul>
@@ -342,6 +348,16 @@
    <li class="toctree-l2">
     <a class="reference internal" href="act.io.proc_sigma_mplv5_read.html">
      act.io.proc_sigma_mplv5_read
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.io.read_arm_mmcr.html">
+     act.io.read_arm_mmcr
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.io.read_arm_netcdf.html">
+     act.io.read_arm_netcdf
     </a>
    </li>
    <li class="toctree-l2">
@@ -395,18 +411,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="act.io.read_mmcr.html">
-     act.io.read_mmcr
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="act.io.read_neon_csv.html">
      act.io.read_neon_csv
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="act.io.read_netcdf.html">
-     act.io.read_netcdf
     </a>
    </li>
    <li class="toctree-l2">
@@ -611,13 +617,13 @@
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="act.plotting.DistributionDisplay.plot_stacked_bar_graph.html">
-       act.plotting.DistributionDisplay.plot_stacked_bar_graph
+      <a class="reference internal" href="act.plotting.DistributionDisplay.plot_stacked_bar.html">
+       act.plotting.DistributionDisplay.plot_stacked_bar
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="act.plotting.DistributionDisplay.plot_stairstep_graph.html">
-       act.plotting.DistributionDisplay.plot_stairstep_graph
+      <a class="reference internal" href="act.plotting.DistributionDisplay.plot_stairstep.html">
+       act.plotting.DistributionDisplay.plot_stairstep
       </a>
      </li>
      <li class="toctree-l3">
@@ -690,78 +696,11 @@
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="act.plotting.HistogramDisplay.html">
-     act.plotting.HistogramDisplay
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.plotting.HistogramDisplay.add_colorbar.html">
-       act.plotting.HistogramDisplay.add_colorbar
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.plotting.HistogramDisplay.add_subplots.html">
-       act.plotting.HistogramDisplay.add_subplots
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.plotting.HistogramDisplay.assign_to_figure_axis.html">
-       act.plotting.HistogramDisplay.assign_to_figure_axis
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.plotting.HistogramDisplay.group_by.html">
-       act.plotting.HistogramDisplay.group_by
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.plotting.HistogramDisplay.plot_heatmap.html">
-       act.plotting.HistogramDisplay.plot_heatmap
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.plotting.HistogramDisplay.plot_size_distribution.html">
-       act.plotting.HistogramDisplay.plot_size_distribution
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.plotting.HistogramDisplay.plot_stacked_bar_graph.html">
-       act.plotting.HistogramDisplay.plot_stacked_bar_graph
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.plotting.HistogramDisplay.plot_stairstep_graph.html">
-       act.plotting.HistogramDisplay.plot_stairstep_graph
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.plotting.HistogramDisplay.put_display_in_subplot.html">
-       act.plotting.HistogramDisplay.put_display_in_subplot
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.plotting.HistogramDisplay.set_xrng.html">
-       act.plotting.HistogramDisplay.set_xrng
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="act.plotting.HistogramDisplay.set_yrng.html">
-       act.plotting.HistogramDisplay.set_yrng
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
     <a class="reference internal" href="act.plotting.SkewTDisplay.html">
      act.plotting.SkewTDisplay
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -832,8 +771,8 @@
     <a class="reference internal" href="act.plotting.TimeSeriesDisplay.html">
      act.plotting.TimeSeriesDisplay
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-    <label for="toctree-checkbox-12">
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -919,8 +858,8 @@
     <a class="reference internal" href="act.plotting.WindRoseDisplay.html">
      act.plotting.WindRoseDisplay
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -976,8 +915,8 @@
     <a class="reference internal" href="act.plotting.XSectionDisplay.html">
      act.plotting.XSectionDisplay
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-    <label for="toctree-checkbox-14">
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -1040,8 +979,8 @@
   <a class="reference internal" href="act.qc.html">
    act.qc
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-  <label for="toctree-checkbox-15">
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -1050,8 +989,8 @@
     <a class="reference internal" href="act.qc.QCFilter.html">
      act.qc.QCFilter
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-    <label for="toctree-checkbox-16">
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -1207,8 +1146,8 @@
     <a class="reference internal" href="act.qc.QCTests.html">
      act.qc.QCTests
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
-    <label for="toctree-checkbox-17">
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -1271,8 +1210,8 @@
   <a class="reference internal" href="act.retrievals.html">
    act.retrievals
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
-  <label for="toctree-checkbox-18">
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -1353,8 +1292,8 @@
   <a class="reference internal" href="act.utils.html">
    act.utils
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
-  <label for="toctree-checkbox-19">
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -1363,8 +1302,8 @@
     <a class="reference internal" href="act.utils.ChangeUnits.html">
      act.utils.ChangeUnits
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
-    <label for="toctree-checkbox-20">
+    <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+    <label for="toctree-checkbox-19">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -1598,40 +1537,40 @@ from a variety of web services</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.croptype.html#act.discovery.croptype" title="act.discovery.croptype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">croptype</span></code></a>([lat, lon, year])</p></td>
-<td><p>Function for working with the CropScape API to get a crop type based on the lat,lon, and year entered.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.download_data.html#act.discovery.download_data" title="act.discovery.download_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_data</span></code></a>(username, token, datastream, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.download_arm_data.html#act.discovery.download_arm_data" title="act.discovery.download_arm_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_arm_data</span></code></a>(username, token, ...[, ...])</p></td>
 <td><p>This tool will help users utilize the ARM Live Data Webservice to download ARM data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.download_neon_data.html#act.discovery.download_neon_data" title="act.discovery.download_neon_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_neon_data</span></code></a>(site_code, product_code, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.download_neon_data.html#act.discovery.download_neon_data" title="act.discovery.download_neon_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_neon_data</span></code></a>(site_code, product_code, ...)</p></td>
 <td><p>Returns a list of data products available for a NEON site.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.download_noaa_psl_data.html#act.discovery.download_noaa_psl_data" title="act.discovery.download_noaa_psl_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_noaa_psl_data</span></code></a>([site, instrument, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.download_noaa_psl_data.html#act.discovery.download_noaa_psl_data" title="act.discovery.download_noaa_psl_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_noaa_psl_data</span></code></a>([site, instrument, ...])</p></td>
 <td><p>Function to download data from the NOAA PSL Profiler Network Data Library <a class="reference external" href="https://psl.noaa.gov/data/obs/datadisplay/">https://psl.noaa.gov/data/obs/datadisplay/</a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.download_surfrad.html#act.discovery.download_surfrad" title="act.discovery.download_surfrad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_surfrad</span></code></a>([site, startdate, enddate, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.download_surfrad_data.html#act.discovery.download_surfrad_data" title="act.discovery.download_surfrad_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_surfrad_data</span></code></a>([site, startdate, ...])</p></td>
 <td><p>Function to download data from the NOAA Surface Radiation Budget network.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.get_airnow_bounded_obs.html#act.discovery.get_airnow_bounded_obs" title="act.discovery.get_airnow_bounded_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_airnow_bounded_obs</span></code></a>(token, start_date, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.get_airnow_bounded_obs.html#act.discovery.get_airnow_bounded_obs" title="act.discovery.get_airnow_bounded_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_airnow_bounded_obs</span></code></a>(token, start_date, ...)</p></td>
 <td><p>Get AQI values or data concentrations for a specific date and time range and set of parameters within a geographic area of intrest <a class="reference external" href="https://docs.airnowapi.org/">https://docs.airnowapi.org/</a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.get_airnow_forecast.html#act.discovery.get_airnow_forecast" title="act.discovery.get_airnow_forecast"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_airnow_forecast</span></code></a>(token, date[, zipcode, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.get_airnow_forecast.html#act.discovery.get_airnow_forecast" title="act.discovery.get_airnow_forecast"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_airnow_forecast</span></code></a>(token, date[, zipcode, ...])</p></td>
 <td><p>This tool will get current or historical AQI values and categories for a reporting area by either Zip code or Lat/Lon coordinate.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.get_airnow_obs.html#act.discovery.get_airnow_obs" title="act.discovery.get_airnow_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_airnow_obs</span></code></a>(token[, date, zipcode, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.get_airnow_obs.html#act.discovery.get_airnow_obs" title="act.discovery.get_airnow_obs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_airnow_obs</span></code></a>(token[, date, zipcode, ...])</p></td>
 <td><p>This tool will get current or historical observed AQI values and categories for a reporting area by either Zip code or Lat/Lon coordinate.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.get_arm_doi.html#act.discovery.get_arm_doi" title="act.discovery.get_arm_doi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_arm_doi</span></code></a>(datastream, startdate, enddate)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.get_arm_doi.html#act.discovery.get_arm_doi" title="act.discovery.get_arm_doi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_arm_doi</span></code></a>(datastream, startdate, enddate)</p></td>
 <td><p>This function will return a citation with DOI, if available, for specified datastream and date range</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.get_asos.html#act.discovery.get_asos" title="act.discovery.get_asos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_asos</span></code></a>(time_window[, lat_range, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.get_asos_data.html#act.discovery.get_asos_data" title="act.discovery.get_asos_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_asos_data</span></code></a>(time_window[, lat_range, ...])</p></td>
 <td><p>Returns all of the station observations from the Iowa Mesonet from either a given latitude and longitude window or a given station code.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.get_product_avail.html#act.discovery.get_product_avail" title="act.discovery.get_product_avail"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_product_avail</span></code></a>(site_code, product_code[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.get_crop_type.html#act.discovery.get_crop_type" title="act.discovery.get_crop_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_crop_type</span></code></a>([lat, lon, year])</p></td>
+<td><p>Function for working with the CropScape API to get a crop type based on the lat,lon, and year entered.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.discovery.get_neon_product_avail.html#act.discovery.get_neon_product_avail" title="act.discovery.get_neon_product_avail"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_neon_product_avail</span></code></a>(site_code, product_code)</p></td>
 <td><p>Returns a list of data products available for a NEON site NEON sites can be found through the NEON website <a class="reference external" href="https://www.neonscience.org/field-sites/explore-field-sites">https://www.neonscience.org/field-sites/explore-field-sites</a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.get_site_products.html#act.discovery.get_site_products" title="act.discovery.get_site_products"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_site_products</span></code></a>(site_code[, print_to_screen])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="act.discovery.get_neon_site_products.html#act.discovery.get_neon_site_products" title="act.discovery.get_neon_site_products"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_neon_site_products</span></code></a>(site_code[, ...])</p></td>
 <td><p>Returns a list of data products available for a NEON site NEON sites can be found through the NEON website <a class="reference external" href="https://www.neonscience.org/field-sites/explore-field-sites">https://www.neonscience.org/field-sites/explore-field-sites</a></p></td>
 </tr>
 </tbody>
@@ -1654,10 +1593,10 @@ from a variety of web services</p>
             <p class="prev-next-title">act.corrections.correct_wind</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="act.discovery.croptype.html" title="next page">
+    <a class='right-next' id="next-link" href="act.discovery.download_arm_data.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">act.discovery.croptype</p>
+        <p class="prev-next-title">act.discovery.download_arm_data</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

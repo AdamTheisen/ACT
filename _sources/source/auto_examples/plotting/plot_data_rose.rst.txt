@@ -44,15 +44,13 @@ and fluxes.
 
  .. code-block:: none
 
-    /home/runner/work/ACT/ACT/examples/plotting/plot_data_rose.py:22: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-      ds = act.io.armfiles.read_netcdf(act.tests.sample_files.EXAMPLE_MET_WILDCARD)
-    /home/runner/work/ACT/ACT/act/plotting/windrosedisplay.py:357: RuntimeWarning: Mean of empty slice
+    /home/runner/work/ACT/ACT/act/plotting/windrosedisplay.py:376: RuntimeWarning: Mean of empty slice
       arr.append(np.nanmean(data[idx]))
     /home/runner/micromamba/envs/act-docs/lib/python3.11/site-packages/numpy/lib/nanfunctions.py:1215: RuntimeWarning: Mean of empty slice
       return np.nanmean(a, axis, out=out, keepdims=keepdims)
     /home/runner/micromamba/envs/act-docs/lib/python3.11/site-packages/numpy/lib/nanfunctions.py:1879: RuntimeWarning: Degrees of freedom <= 0 for slice.
       var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
-    /home/runner/work/ACT/ACT/act/plotting/windrosedisplay.py:424: RuntimeWarning: Mean of empty slice
+    /home/runner/work/ACT/ACT/act/plotting/windrosedisplay.py:443: RuntimeWarning: Mean of empty slice
       mean_data[i, j] = np.nanmean(data[idx])
 
 
@@ -62,7 +60,7 @@ and fluxes.
 
 |
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import numpy as np
@@ -71,7 +69,7 @@ and fluxes.
     import act
 
     # Read in some data with wind speed/direction in the file
-    ds = act.io.armfiles.read_netcdf(act.tests.sample_files.EXAMPLE_MET_WILDCARD)
+    ds = act.io.arm.read_arm_netcdf(act.tests.sample_files.EXAMPLE_MET_WILDCARD)
 
     # Set up wind rose display object
     display = act.plotting.WindRoseDisplay(ds, subplot_shape=(2, 3), figsize=(16, 10))
@@ -149,7 +147,7 @@ and fluxes.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.085 seconds)
+   **Total running time of the script:** (0 minutes 3.016 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_plotting_plot_data_rose.py:
@@ -158,16 +156,13 @@ and fluxes.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_data_rose.ipynb <plot_data_rose.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_data_rose.py <plot_data_rose.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: plot_data_rose.ipynb <plot_data_rose.ipynb>`
 
 
 .. only:: html

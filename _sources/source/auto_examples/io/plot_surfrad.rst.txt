@@ -40,11 +40,10 @@ Author: Adam Theisen
 
  .. code-block:: none
 
-    /home/runner/work/ACT/ACT/examples/io/plot_surfrad.py:16: DeprecationWarning: API will be changing from act.discovery.get_surfrad.download_surfrad to act.discovery.surfrad.download_surfrad_data
-      results = act.discovery.download_surfrad('tbl', startdate='20230601', enddate='20230602')
     Downloading tbl23152.dat
     Downloading tbl23153.dat
     ['/home/runner/work/ACT/ACT/examples/io/Boulder_CO_surfrad/tbl23152.dat', '/home/runner/work/ACT/ACT/examples/io/Boulder_CO_surfrad/tbl23153.dat']
+    No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
     No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
 
 
@@ -54,14 +53,14 @@ Author: Adam Theisen
 
 |
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import act
     import matplotlib.pyplot as plt
 
     # Easily download data from SURFRAD
-    results = act.discovery.download_surfrad('tbl', startdate='20230601', enddate='20230602')
+    results = act.discovery.download_surfrad_data('tbl', startdate='20230601', enddate='20230602')
     print(results)
 
     # But it's easy enough to read form the URLs as well
@@ -89,7 +88,7 @@ Author: Adam Theisen
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.199 seconds)
+   **Total running time of the script:** (0 minutes 1.818 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_io_plot_surfrad.py:
@@ -98,16 +97,13 @@ Author: Adam Theisen
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_surfrad.ipynb <plot_surfrad.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_surfrad.py <plot_surfrad.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: plot_surfrad.ipynb <plot_surfrad.ipynb>`
 
 
 .. only:: html

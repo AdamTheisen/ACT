@@ -25,7 +25,7 @@ This example shows the different ways to pull
 air quality information from EPA's AirNow API for
 a station near to SGP
 
-.. GENERATED FROM PYTHON SOURCE LINES 10-56
+.. GENERATED FROM PYTHON SOURCE LINES 10-54
 
 
 
@@ -33,13 +33,11 @@ a station near to SGP
 
 
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import os
-
     import matplotlib.pyplot as plt
-
     import act
 
     # You need an account and token from https://docs.airnowapi.org/ first
@@ -94,16 +92,13 @@ a station near to SGP
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_airnow.ipynb <plot_airnow.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_airnow.py <plot_airnow.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: plot_airnow.ipynb <plot_airnow.ipynb>`
 
 
 .. only:: html

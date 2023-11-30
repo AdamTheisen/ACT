@@ -36,21 +36,10 @@ Author: Adam Theisen
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /home/runner/work/ACT/ACT/examples/qc/plot_dqr_qc.py:18: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-      obj = act.io.armfiles.read_netcdf(files)
 
 
 
-
-
-
-|
-
-.. code-block:: default
+.. code-block:: Python
 
 
 
@@ -60,7 +49,7 @@ Author: Adam Theisen
 
     # Read in sample AOSMET data
     files = act.tests.sample_files.EXAMPLE_AOSMET
-    obj = act.io.armfiles.read_netcdf(files)
+    obj = act.io.arm.read_arm_netcdf(files)
 
     # Query DQR webservice for a specific variable
     # As can be seen in the "Plotting QC Flags" example
@@ -85,7 +74,7 @@ Author: Adam Theisen
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.490 seconds)
+   **Total running time of the script:** (0 minutes 0.507 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_qc_plot_dqr_qc.py:
@@ -94,16 +83,13 @@ Author: Adam Theisen
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_dqr_qc.ipynb <plot_dqr_qc.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_dqr_qc.py <plot_dqr_qc.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: plot_dqr_qc.ipynb <plot_dqr_qc.ipynb>`
 
 
 .. only:: html

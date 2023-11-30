@@ -42,13 +42,9 @@ Author: Zach Sherman, Adam Theisen
 
  .. code-block:: none
 
-    /home/runner/work/ACT/ACT/examples/discovery/plot_noaa_fmcw_moment.py:20: DeprecationWarning: API will be changing from act.discovery.get_noaapsl to act.discovery.noaapsl
-      result_22 = act.discovery.download_noaa_psl_data(
     Downloading dkps2221322a.mom
     Downloading hkps2221322a.mom
     Downloading kps2221322.raw
-    /home/runner/work/ACT/ACT/examples/discovery/plot_noaa_fmcw_moment.py:23: DeprecationWarning: API will be changing from act.discovery.get_noaapsl to act.discovery.noaapsl
-      result_23 = act.discovery.download_noaa_psl_data(
     Downloading dkps2221323a.mom
     Downloading hkps2221323a.mom
     Downloading kps2221323.raw
@@ -60,7 +56,7 @@ Author: Zach Sherman, Adam Theisen
 
 |
 
-.. code-block:: default
+.. code-block:: Python
 
 
 
@@ -108,13 +104,13 @@ Author: Zach Sherman, Adam Theisen
         subplot_index=(1,),
     )
     # Adjust ylims of parsivel plot.
-    display.axes[1].set_ylim([0, 10])
+    display.axes[1, 0].set_ylim([0, 10])
     plt.show()
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 11.601 seconds)
+   **Total running time of the script:** (0 minutes 13.316 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_discovery_plot_noaa_fmcw_moment.py:
@@ -123,16 +119,13 @@ Author: Zach Sherman, Adam Theisen
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_noaa_fmcw_moment.ipynb <plot_noaa_fmcw_moment.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_noaa_fmcw_moment.py <plot_noaa_fmcw_moment.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: plot_noaa_fmcw_moment.ipynb <plot_noaa_fmcw_moment.ipynb>`
 
 
 .. only:: html

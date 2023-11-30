@@ -36,21 +36,10 @@ Author: Maxwell Grover
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /home/runner/work/ACT/ACT/examples/plotting/plot_multiple_column.py:16: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-      met_ds = act.io.armfiles.read_netcdf(files)
 
 
 
-
-
-
-|
-
-.. code-block:: default
+.. code-block:: Python
 
 
     from matplotlib import pyplot as plt
@@ -58,7 +47,7 @@ Author: Maxwell Grover
     import act
 
     files = act.tests.sample_files.EXAMPLE_MET_WILDCARD
-    met_ds = act.io.armfiles.read_netcdf(files)
+    met_ds = act.io.arm.read_arm_netcdf(files)
 
 
     # Plot data
@@ -75,7 +64,7 @@ Author: Maxwell Grover
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.683 seconds)
+   **Total running time of the script:** (0 minutes 0.721 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_plotting_plot_multiple_column.py:
@@ -84,16 +73,13 @@ Author: Maxwell Grover
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_multiple_column.ipynb <plot_multiple_column.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_multiple_column.py <plot_multiple_column.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: plot_multiple_column.ipynb <plot_multiple_column.ipynb>`
 
 
 .. only:: html

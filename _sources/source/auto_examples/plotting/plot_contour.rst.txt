@@ -36,45 +36,10 @@ Author: Adam Theisen
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /home/runner/work/ACT/ACT/examples/plotting/plot_contour.py:25: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-      ds = act.io.armfiles.read_netcdf(f)
-    /home/runner/work/ACT/ACT/examples/plotting/plot_contour.py:25: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-      ds = act.io.armfiles.read_netcdf(f)
-    /home/runner/work/ACT/ACT/examples/plotting/plot_contour.py:25: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-      ds = act.io.armfiles.read_netcdf(f)
-    /home/runner/work/ACT/ACT/examples/plotting/plot_contour.py:25: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-      ds = act.io.armfiles.read_netcdf(f)
-    /home/runner/work/ACT/ACT/examples/plotting/plot_contour.py:25: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-      ds = act.io.armfiles.read_netcdf(f)
-    /home/runner/work/ACT/ACT/examples/plotting/plot_contour.py:25: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-      ds = act.io.armfiles.read_netcdf(f)
-    /home/runner/work/ACT/ACT/examples/plotting/plot_contour.py:25: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-      ds = act.io.armfiles.read_netcdf(f)
-    /home/runner/work/ACT/ACT/examples/plotting/plot_contour.py:25: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-      ds = act.io.armfiles.read_netcdf(f)
-    /home/runner/work/ACT/ACT/examples/plotting/plot_contour.py:25: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-      ds = act.io.armfiles.read_netcdf(f)
-    /home/runner/work/ACT/ACT/examples/plotting/plot_contour.py:25: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-      ds = act.io.armfiles.read_netcdf(f)
-    /home/runner/work/ACT/ACT/examples/plotting/plot_contour.py:25: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-      ds = act.io.armfiles.read_netcdf(f)
-    /home/runner/work/ACT/ACT/examples/plotting/plot_contour.py:25: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-      ds = act.io.armfiles.read_netcdf(f)
-    /home/runner/work/ACT/ACT/examples/plotting/plot_contour.py:25: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-      ds = act.io.armfiles.read_netcdf(f)
 
 
 
-
-
-
-|
-
-.. code-block:: default
+.. code-block:: Python
 
 
     import glob
@@ -90,7 +55,7 @@ Author: Adam Theisen
     wind_fields = {}
     station_fields = {}
     for f in files:
-        ds = act.io.armfiles.read_netcdf(f)
+        ds = act.io.arm.read_arm_netcdf(f)
         data.update({f: ds})
         fields.update({f: ['lon', 'lat', 'temp_mean']})
         wind_fields.update({f: ['lon', 'lat', 'wspd_vec_mean', 'wdir_vec_mean']})
@@ -116,7 +81,7 @@ Author: Adam Theisen
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.798 seconds)
+   **Total running time of the script:** (0 minutes 0.769 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_plotting_plot_contour.py:
@@ -125,16 +90,13 @@ Author: Adam Theisen
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_contour.ipynb <plot_contour.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_contour.py <plot_contour.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: plot_contour.ipynb <plot_contour.ipynb>`
 
 
 .. only:: html

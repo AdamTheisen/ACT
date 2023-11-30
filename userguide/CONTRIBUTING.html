@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Contributing &#8212; Atmospheric data Community Toolkit 0.post1+g787314e documentation</title>
+    <title>Contributing &#8212; Atmospheric data Community Toolkit 0.post1+g35d7dba documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -44,7 +44,7 @@
     <script src="../_static/doc_shared.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ACT Version 2 Release Guide" href="GUIDE_V2.html" />
+    <link rel="next" title="API Reference Manual" href="../API/index.html" />
     <link rel="prev" title="Usage" href="usage.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -120,7 +120,13 @@
       
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
-    <li class="toctree-l1 current active nav-item">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="GUIDE_V2.html">
+  ACT Version 2 Release Guide
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="index.html">
   User Guide
  </a>
@@ -297,6 +303,23 @@
   <a class="reference internal nav-link" href="#code-style">
    Code Style
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#naming-convenction">
+   Naming Convenction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discovery">
+     Discovery
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Discovery
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#adding-secrets-and-environment-variables">
@@ -507,7 +530,7 @@ documentation style.</p>
 <li><p><a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard">https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard</a></p></li>
 </ul>
 <p>An example:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">read_netcdf</span><span class="p">(</span><span class="n">filenames</span><span class="p">,</span> <span class="n">variables</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">read_arm_netcdf</span><span class="p">(</span><span class="n">filenames</span><span class="p">,</span> <span class="n">variables</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns `xarray.Dataset` with stored data and metadata from a</span>
@@ -535,7 +558,7 @@ documentation style.</p>
 
 <span class="sd">        import act</span>
 
-<span class="sd">        the_ds, the_flag = act.io.armfiles.read_netcdf(</span>
+<span class="sd">        the_ds, the_flag = act.io.arm.read_arm_netcdf(</span>
 <span class="sd">            act.tests.sample_files.EXAMPLE_SONDE_WILDCARD)</span>
 <span class="sd">        print(the_ds.act.datastream)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -583,6 +606,19 @@ the tools documentation for details on this process.</p>
 <li><p><a class="reference external" href="https://flake8.pycqa.org/en/latest/">https://flake8.pycqa.org/en/latest/</a></p></li>
 <li><p><a class="reference external" href="https://www.pylint.org/">https://www.pylint.org/</a></p></li>
 </ul>
+</section>
+<section id="naming-convenction">
+<h2>Naming Convenction<a class="headerlink" href="#naming-convenction" title="Permalink to this headline">#</a></h2>
+<section id="discovery">
+<h3>Discovery<a class="headerlink" href="#discovery" title="Permalink to this headline">#</a></h3>
+<p>When adding discovery modules or functions please adhere to the following
+* Filenames should just include the name of the organization (arm) or portal (airnow) and no other filler words like get or download
+* Functions should follow [get/download]_[org/portal]_[data/other description].  If it is getting data but not downloading a file, it should start with get, like get_asos_data. If it downloads a file, it should start with download.  The other description can vary depending on what you are retrieving.  Please check out the existing functions for ideas.</p>
+</section>
+<section id="id1">
+<h3>Discovery<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>Similarly, for the io modules, the names should not have filler and just be the organization or portal name.  The functions should clearly indicate what it is doing like read_arm_netcdf instead of read_netcdf if the function is specific to ARM files.</p>
+</section>
 </section>
 <section id="adding-secrets-and-environment-variables">
 <h2>Adding Secrets and Environment Variables<a class="headerlink" href="#adding-secrets-and-environment-variables" title="Permalink to this headline">#</a></h2>
@@ -767,10 +803,10 @@ rerun.</p>
             <p class="prev-next-title">Usage</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="GUIDE_V2.html" title="next page">
+    <a class='right-next' id="next-link" href="../API/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ACT Version 2 Release Guide</p>
+        <p class="prev-next-title">API Reference Manual</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
