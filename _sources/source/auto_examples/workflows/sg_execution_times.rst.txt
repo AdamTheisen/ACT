@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**03:01.718** total execution time for 5 files **from source/auto_examples/workflows**:
+**05:44.371** total execution time for 5 files **from source/auto_examples/workflows**:
 
 .. container::
 
@@ -32,18 +32,18 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
+   * - :ref:`sphx_glr_source_auto_examples_workflows_plot_aerioe_with_cbh.py` (``plot_aerioe_with_cbh.py``)
+     - 03:24.906
+     - 0.0
    * - :ref:`sphx_glr_source_auto_examples_workflows_plot_qc_transforms.py` (``plot_qc_transforms.py``)
-     - 01:18.010
+     - 01:19.004
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_workflows_plot_multiple_dataset.py` (``plot_multiple_dataset.py``)
-     - 00:50.616
-     - 0.0
-   * - :ref:`sphx_glr_source_auto_examples_workflows_plot_aerioe_with_cbh.py` (``plot_aerioe_with_cbh.py``)
-     - 00:36.018
+     - 00:43.054
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_workflows_plot_merged_product.py` (``plot_merged_product.py``)
-     - 00:13.385
+     - 00:13.664
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_workflows_plot_weighted_average.py` (``plot_weighted_average.py``)
-     - 00:03.688
+     - 00:03.742
      - 0.0
