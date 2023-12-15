@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>act.utils.data_utils &#8212; Atmospheric data Community Toolkit 0.post1+g42ee209 documentation</title>
+    <title>act.utils.data_utils &#8212; Atmospheric data Community Toolkit 0.post1+g8c5fa72 documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -324,7 +324,7 @@
 
 
 <span class="c1"># @xr.register_dataset_accessor(&#39;utils&#39;)</span>
-<span class="k">class</span> <span class="nc">DatastreamParserARM</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="DatastreamParserARM"><a class="viewcode-back" href="../../../API/generated/act.utils.DatastreamParserARM.html#act.utils.DatastreamParserARM">[docs]</a><span class="k">class</span> <span class="nc">DatastreamParserARM</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Class to parse ARM datastream names or filenames into its components.</span>
 <span class="sd">    Will return None for each attribute if not extracted from the filename.</span>
@@ -444,13 +444,13 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__datastream</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">set_datastream</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ds</span><span class="p">):</span>
+<div class="viewcode-block" id="DatastreamParserARM.set_datastream"><a class="viewcode-back" href="../../../API/generated/act.utils.DatastreamParserARM.set_datastream.html#act.utils.DatastreamParserARM.set_datastream">[docs]</a>    <span class="k">def</span> <span class="nf">set_datastream</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ds</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Method used to set or reset object by passing a new datastream name.</span>
 
 <span class="sd">        &#39;&#39;&#39;</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">datastream</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -547,7 +547,7 @@
 <span class="sd">        Property returning file extension from filename.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
 
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__ext</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__ext</span></div>
 
 
 <div class="viewcode-block" id="assign_coordinates"><a class="viewcode-back" href="../../../API/generated/act.utils.assign_coordinates.html#act.utils.assign_coordinates">[docs]</a><span class="k">def</span> <span class="nf">assign_coordinates</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">coord_list</span><span class="p">):</span>
@@ -643,6 +643,7 @@
         <span class="c1"># Leaving code in here in case we need to update.</span>
         <span class="c1"># diff = np.diff(time.astype(&#39;datetime64[s]&#39;), 1)</span>
         <span class="n">diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
         <span class="c1"># Wrapping in a try to catch error while switching between numpy 1.10 to 1.11</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">mode</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">diff</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">mode</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -653,10 +654,24 @@
         <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
             <span class="n">corr_i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">offset</span>
-            <span class="n">time_added</span> <span class="o">=</span> <span class="n">time</span><span class="p">[</span><span class="n">corr_i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">time</span><span class="p">[</span><span class="n">corr_i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">time</span><span class="p">[</span><span class="n">corr_i</span><span class="p">])</span> <span class="o">/</span> <span class="mf">2.0</span>
-            <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">corr_i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">time_added</span><span class="p">)</span>
-            <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">corr_i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-            <span class="n">offset</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="c1"># For line plotting adding a NaN will stop the connection of the line</span>
+                <span class="c1"># between points. So we just need to add a NaN anywhere between the points.</span>
+                <span class="n">corr_i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">offset</span>
+                <span class="n">time_added</span> <span class="o">=</span> <span class="n">time</span><span class="p">[</span><span class="n">corr_i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">time</span><span class="p">[</span><span class="n">corr_i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">time</span><span class="p">[</span><span class="n">corr_i</span><span class="p">])</span> <span class="o">/</span> <span class="mf">2.0</span>
+                <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">corr_i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">time_added</span><span class="p">)</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">corr_i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">offset</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># For 2D plots need to add a NaN right after and right before the data</span>
+                <span class="c1"># to correctly mitigate streaking with pcolormesh.</span>
+                <span class="n">time_added_1</span> <span class="o">=</span> <span class="n">time</span><span class="p">[</span><span class="n">corr_i</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># One time step after</span>
+                <span class="n">time_added_2</span> <span class="o">=</span> <span class="n">time</span><span class="p">[</span><span class="n">corr_i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># One time step before</span>
+                <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">corr_i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="n">time_added_1</span><span class="p">,</span> <span class="n">time_added_2</span><span class="p">])</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">corr_i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">corr_i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">offset</span> <span class="o">+=</span> <span class="mi">2</span>
 
         <span class="k">if</span> <span class="n">time_is_DataArray</span><span class="p">:</span>
             <span class="n">time</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="n">time_attributes</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="n">time_dims</span><span class="p">)</span>

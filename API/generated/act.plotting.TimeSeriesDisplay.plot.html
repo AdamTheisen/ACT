@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>act.plotting.TimeSeriesDisplay.plot &#8212; Atmospheric data Community Toolkit 0.post1+g42ee209 documentation</title>
+    <title>act.plotting.TimeSeriesDisplay.plot &#8212; Atmospheric data Community Toolkit 0.post1+g8c5fa72 documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -423,6 +423,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="act.io.read_psl_radar_fmcw_moment.html">
      act.io.read_psl_radar_fmcw_moment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.io.read_psl_surface_met.html">
+     act.io.read_psl_surface_met
     </a>
    </li>
    <li class="toctree-l2">
@@ -1247,6 +1252,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="act.retrievals.calculate_pbl_heffter.html">
+     act.retrievals.calculate_pbl_heffter
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="act.retrievals.calculate_pbl_liu_liang.html">
      act.retrievals.calculate_pbl_liu_liang
     </a>
@@ -1311,6 +1321,68 @@
      <li class="toctree-l3">
       <a class="reference internal" href="act.utils.ChangeUnits.change_units.html">
        act.utils.ChangeUnits.change_units
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="act.utils.DatastreamParserARM.html">
+     act.utils.DatastreamParserARM
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+    <label for="toctree-checkbox-20">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.set_datastream.html">
+       act.utils.DatastreamParserARM.set_datastream
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.datastream.html">
+       act.utils.DatastreamParserARM.datastream
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.datastream_class.html">
+       act.utils.DatastreamParserARM.datastream_class
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.datastream_standard.html">
+       act.utils.DatastreamParserARM.datastream_standard
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.date.html">
+       act.utils.DatastreamParserARM.date
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.ext.html">
+       act.utils.DatastreamParserARM.ext
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.facility.html">
+       act.utils.DatastreamParserARM.facility
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.level.html">
+       act.utils.DatastreamParserARM.level
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.site.html">
+       act.utils.DatastreamParserARM.site
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.time.html">
+       act.utils.DatastreamParserARM.time
       </a>
      </li>
     </ul>
@@ -1529,7 +1601,7 @@
 <h1>act.plotting.TimeSeriesDisplay.plot<a class="headerlink" href="#act-plotting-timeseriesdisplay-plot" title="Permalink to this headline">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="act.plotting.TimeSeriesDisplay.plot">
-<span class="sig-prename descclassname"><span class="pre">TimeSeriesDisplay.</span></span><span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dsname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subplot_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">day_night_background</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invert_y_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abs_limits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(None,</span> <span class="pre">None)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_rng</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_rng</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_var_for_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_shading</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assessment_overplot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overplot_marker</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overplot_behind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overplot_markersize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assessment_overplot_category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'Incorrect':</span> <span class="pre">['Bad',</span> <span class="pre">'Incorrect'],</span> <span class="pre">'Suspect':</span> <span class="pre">['Indeterminate',</span> <span class="pre">'Suspect']}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assessment_overplot_category_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'Acceptable':</span> <span class="pre">((0.0,</span> <span class="pre">0.4240129715562796,</span> <span class="pre">0.4240129715562796),),</span> <span class="pre">'Bad':</span> <span class="pre">(0.9285714285714286,</span> <span class="pre">0.7130901016453677,</span> <span class="pre">0.7130901016453677),</span> <span class="pre">'Incorrect':</span> <span class="pre">(0.9285714285714286,</span> <span class="pre">0.7130901016453677,</span> <span class="pre">0.7130901016453677),</span> <span class="pre">'Not</span> <span class="pre">Failing':</span> <span class="pre">((0.0,</span> <span class="pre">0.4240129715562796,</span> <span class="pre">0.4240129715562796),),</span> <span class="pre">'Suspect':</span> <span class="pre">'orange'}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_line_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cbar_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cbar_h_adjust</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">secondary_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_axis_flag_meanings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colorbar_labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_friendly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match_line_label_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/act/plotting/timeseriesdisplay.html#TimeSeriesDisplay.plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#act.plotting.TimeSeriesDisplay.plot" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">TimeSeriesDisplay.</span></span><span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dsname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subplot_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">day_night_background</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invert_y_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abs_limits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(None,</span> <span class="pre">None)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_rng</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_rng</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_var_for_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_shading</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assessment_overplot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overplot_marker</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overplot_behind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overplot_markersize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assessment_overplot_category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'Incorrect':</span> <span class="pre">['Bad',</span> <span class="pre">'Incorrect'],</span> <span class="pre">'Suspect':</span> <span class="pre">['Indeterminate',</span> <span class="pre">'Suspect']}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assessment_overplot_category_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'Acceptable':</span> <span class="pre">((0.0,</span> <span class="pre">0.4240129715562796,</span> <span class="pre">0.4240129715562796),),</span> <span class="pre">'Bad':</span> <span class="pre">(0.9285714285714286,</span> <span class="pre">0.7130901016453677,</span> <span class="pre">0.7130901016453677),</span> <span class="pre">'Incorrect':</span> <span class="pre">(0.9285714285714286,</span> <span class="pre">0.7130901016453677,</span> <span class="pre">0.7130901016453677),</span> <span class="pre">'Not</span> <span class="pre">Failing':</span> <span class="pre">((0.0,</span> <span class="pre">0.4240129715562796,</span> <span class="pre">0.4240129715562796),),</span> <span class="pre">'Suspect':</span> <span class="pre">'orange'}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_line_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cbar_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cbar_h_adjust</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_axis_flag_meanings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colorbar_labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb_friendly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match_line_label_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/act/plotting/timeseriesdisplay.html#TimeSeriesDisplay.plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#act.plotting.TimeSeriesDisplay.plot" title="Permalink to this definition">#</a></dt>
 <dd><p>Makes a timeseries plot. If subplots have not been added yet, an axis
 will be created assuming that there is only going to be one plot.</p>
 <p>If plotting a high data volume 2D dataset, it may take some time to plot.
@@ -1579,8 +1651,6 @@ number of lines plotted.</p></li>
 <li><p><strong>cbar_label</strong> (<em>str</em>) – Option to overwrite default colorbar label.</p></li>
 <li><p><strong>cbar_h_adjust</strong> (<em>float</em>) – Option to adjust location of colorbar horizontally. Positive values
 move to right negative values move to left.</p></li>
-<li><p><strong>secondary_y</strong> (<em>boolean</em>) – Option to plot on secondary y axis.
-This will automatically change the color of the axis to match the line</p></li>
 <li><p><strong>y_axis_flag_meanings</strong> (<em>boolean or int</em>) – When set to True and plotting state variable with flag_values and
 flag_meanings attributes will replace y axis numerical values
 with flag_meanings value. Set to a positive number larger than 1
