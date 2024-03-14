@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Create a dataset to mimic ARM file formats &#8212; Atmospheric data Community Toolkit 0.post1+gb0a5232 documentation</title>
+    <title>Create a dataset to mimic ARM file formats &#8212; Atmospheric data Community Toolkit 0.post1+gab0b516 documentation</title>
     
     <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -41,7 +41,7 @@
     
     <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
   
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=fc836df3"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=4fded1dd"></script>
     <script src="../../../_static/doctools.js?v=888ff710"></script>
     <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -316,23 +316,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_skewt.html">
-     Skew-T plot of a sounding
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_violin.html">
      Investigate Temperature Quantiles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_secondary_y.html">
-     Secondary Y-Axis Plotting
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_multiple_column.html">
-     Plot a timeseries of sounding data
     </a>
    </li>
    <li class="toctree-l2">
@@ -341,13 +326,23 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_ceil.html">
-     Simple plot of 2D data
+    <a class="reference internal" href="../plotting/plot_skewt.html">
+     Skew-T plot of a sounding
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_multiple_column.html">
+     Plot a timeseries of sounding data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_days.html">
      Calculate and plot wind rose plots separated by day.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_secondary_y.html">
+     Secondary Y-Axis Plotting
     </a>
    </li>
    <li class="toctree-l2">
@@ -358,6 +353,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_xsection.html">
      Multidimensional cross sections
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_ceil.html">
+     Simple plot of 2D data
     </a>
    </li>
    <li class="toctree-l2">
@@ -381,23 +381,23 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_data_rose.html">
-     Data rose plot
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_rh_timeseries.html">
      Plot winds and relative humidity from sounding data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_presentweathercode.html">
-     Plot Present Weather Code
+    <a class="reference internal" href="../plotting/plot_data_rose.html">
+     Data rose plot
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_wind_rose.html">
      Windrose and windbarb timeseries plot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_presentweathercode.html">
+     Plot Present Weather Code
     </a>
    </li>
    <li class="toctree-l2">
@@ -519,13 +519,13 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../workflows/plot_merged_product.html">
-     Merge multiple datasets
+    <a class="reference internal" href="../workflows/plot_weighted_average.html">
+     Calculate and plot weighted means
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../workflows/plot_weighted_average.html">
-     Calculate and plot weighted means
+    <a class="reference internal" href="../workflows/plot_merged_product.html">
+     Merge multiple datasets
     </a>
    </li>
   </ul>
@@ -582,25 +582,25 @@ files, making for easier use across the community.</p>
 <p>Author: Adam Theisen</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/runner/work/ACT/ACT/act/io/arm.py:458: UserWarning: Version:  not available or not specified. Using Version: 1.2
   warnings.warn(
-&lt;xarray.Dataset&gt;
+&lt;xarray.Dataset&gt; Size: 3MB
 Dimensions:                            (time: 1440, drop_diameter: 50)
 Coordinates:
-  * time                               (time) int64 0 1 2 3 ... 1437 1438 1439
-  * drop_diameter                      (drop_diameter) int64 0 1 2 ... 47 48 49
+  * time                               (time) int64 12kB 0 1 2 ... 1438 1439
+  * drop_diameter                      (drop_diameter) int64 400B 0 1 ... 48 49
 Data variables: (12/36)
-    base_time                          (time) float64 -9.999e+03 ... -9.999e+03
-    time_offset                        (time) float64 -9.999e+03 ... -9.999e+03
-    num_drops                          (time, drop_diameter) float64 -9.999e+...
-    qc_num_drops                       (time, drop_diameter) float64 -9.999e+...
-    num_density                        (time, drop_diameter) float64 -9.999e+...
-    qc_num_density                     (time, drop_diameter) float64 -9.999e+...
+    base_time                          (time) float64 12kB -9.999e+03 ... -9....
+    time_offset                        (time) float64 12kB -9.999e+03 ... -9....
+    num_drops                          (time, drop_diameter) float64 576kB -9...
+    qc_num_drops                       (time, drop_diameter) float64 576kB -9...
+    num_density                        (time, drop_diameter) float64 576kB -9...
+    qc_num_density                     (time, drop_diameter) float64 576kB -9...
     ...                                 ...
-    moment5                            (time) float64 -9.999e+03 ... -9.999e+03
-    moment6                            (time) float64 -9.999e+03 ... -9.999e+03
-    radar_reflectivity                 (time) float64 -9.999e+03 ... -9.999e+03
-    lat                                (time) float64 -9.999e+03 ... -9.999e+03
-    lon                                (time) float64 -9.999e+03 ... -9.999e+03
-    alt                                (time) float64 -9.999e+03 ... -9.999e+03
+    moment5                            (time) float64 12kB -9.999e+03 ... -9....
+    moment6                            (time) float64 12kB -9.999e+03 ... -9....
+    radar_reflectivity                 (time) float64 12kB -9.999e+03 ... -9....
+    lat                                (time) float64 12kB -9.999e+03 ... -9....
+    lon                                (time) float64 12kB -9.999e+03 ... -9....
+    alt                                (time) float64 12kB -9.999e+03 ... -9....
 Attributes: (12/23)
     command_line:
     process_version:
@@ -654,7 +654,7 @@ random 1234253sdgfadf
     <span class="s1">&#39;command_line&#39;</span><span class="p">:</span> <span class="s1">&#39;python  plot_create_arm_ds.py&#39;</span><span class="p">,</span>
     <span class="s1">&#39;process_version&#39;</span><span class="p">:</span> <span class="s1">&#39;1.2.3&#39;</span><span class="p">,</span>
     <span class="s1">&#39;history&#39;</span><span class="p">:</span> <span class="s1">&#39;Processed with Jupyter Workbench&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;random&#39;</span><span class="p">:</span> <span class="s1">&#39;1234253sdgfadf&#39;</span>
+    <span class="s1">&#39;random&#39;</span><span class="p">:</span> <span class="s1">&#39;1234253sdgfadf&#39;</span><span class="p">,</span>
 <span class="p">}</span>
 <span class="k">for</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">a</span></a> <span class="ow">in</span> <a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">atts</span></a><span class="p">:</span>
     <span class="k">if</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">a</span></a> <span class="ow">in</span> <span class="n">ds</span><span class="o">.</span><span class="n">attrs</span><span class="p">:</span>
@@ -672,7 +672,7 @@ random 1234253sdgfadf
 <span class="n">ds</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">write_netcdf</span><span class="p">(</span><span class="n">cf_compliant</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s1">&#39;./sgpvdisX1.b1.20230101.000000.cf&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 2.287 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 2.449 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-source-auto-examples-io-plot-create-arm-ds-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/7bdcd44eee3c41f252a0d29c37901bac/plot_create_arm_ds.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_create_arm_ds.ipynb</span></code></a></p>

@@ -26,7 +26,7 @@ temperature averages using the add_solar_variable function
 
 Author: Adam Theisen
 
-.. GENERATED FROM PYTHON SOURCE LINES 10-43
+.. GENERATED FROM PYTHON SOURCE LINES 10-45
 
 
 
@@ -36,19 +36,8 @@ Author: Adam Theisen
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /home/runner/micromamba/envs/act-docs/lib/python3.11/site-packages/xarray/core/common.py:958: UserWarning: Passing ``keep_attrs`` to ``resample`` has no effect and will raise an error in xarray 0.20. Pass ``keep_attrs`` directly to the applied function, e.g. ``resample(...).mean(keep_attrs=True)``.
-      warnings.warn(
 
 
-
-
-
-
-|
 
 .. code-block:: Python
 
@@ -59,13 +48,15 @@ Author: Adam Theisen
     import act
 
     # Read in the sample MET data
-    met_wildcard_list = ['sgpmetE13.b1.20190101.000000.cdf',
-                         'sgpmetE13.b1.20190102.000000.cdf',
-                         'sgpmetE13.b1.20190103.000000.cdf',
-                         'sgpmetE13.b1.20190104.000000.cdf',
-                         'sgpmetE13.b1.20190105.000000.cdf',
-                         'sgpmetE13.b1.20190106.000000.cdf',
-                         'sgpmetE13.b1.20190107.000000.cdf']
+    met_wildcard_list = [
+        'sgpmetE13.b1.20190101.000000.cdf',
+        'sgpmetE13.b1.20190102.000000.cdf',
+        'sgpmetE13.b1.20190103.000000.cdf',
+        'sgpmetE13.b1.20190104.000000.cdf',
+        'sgpmetE13.b1.20190105.000000.cdf',
+        'sgpmetE13.b1.20190106.000000.cdf',
+        'sgpmetE13.b1.20190107.000000.cdf',
+    ]
     met_filenames = [DATASETS.fetch(file) for file in met_wildcard_list]
     ds = act.io.arm.read_arm_netcdf(met_filenames)
 
@@ -76,7 +67,7 @@ Author: Adam Theisen
     ds = ds.where(ds['sun_variable'] == 1)
 
     # Take daily mean using xarray features
-    ds = ds.resample(time='1d', skipna=True, keep_attrs=True).mean()
+    ds = ds.resample(time='1d', skipna=True).mean()
 
     # Creat Plot Display
     display = act.plotting.TimeSeriesDisplay(ds, figsize=(15, 10))
@@ -89,7 +80,7 @@ Author: Adam Theisen
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.172 seconds)
+   **Total running time of the script:** (0 minutes 1.329 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_plotting_plot_daytime_averages.py:
