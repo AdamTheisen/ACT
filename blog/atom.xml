@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>arm-doe.github.io/ACT/</id>
   <title>ACT Blog</title>
-  <updated>2024-04-25T17:43:00.993262+00:00</updated>
+  <updated>2024-05-17T20:46:28.026902+00:00</updated>
   <link href="arm-doe.github.io/ACT/"/>
   <link href="arm-doe.github.io/ACT/blog/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.io/" version="0.11.8">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
   <entry>
     <id>arm-doe.github.io/ACT/blog_posts/2024/2024_Eclipse_SGP.html</id>
     <title>Exploration of data from the 2024 eclipse at SGP</title>
