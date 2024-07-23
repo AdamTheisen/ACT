@@ -40,18 +40,8 @@ Author: Ken Kehoe
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    ['green', 'orange', 'red']
 
 
-
-
-
-
-|
 
 .. code-block:: Python
 
@@ -93,7 +83,7 @@ Author: Ken Kehoe
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.179 seconds)
+   **Total running time of the script:** (0 minutes 0.178 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_qc_plot_force_line_qc.py:
@@ -109,6 +99,10 @@ Author: Ken Kehoe
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_force_line_qc.py <plot_force_line_qc.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: plot_force_line_qc.zip <plot_force_line_qc.zip>`
 
 
 .. only:: html

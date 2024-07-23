@@ -77,6 +77,10 @@ Author: Zachary Sherman
 
       :download:`Download Python source code: plot_hist_kwargs.py <plot_hist_kwargs.py>`
 
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: plot_hist_kwargs.zip <plot_hist_kwargs.zip>`
+
 
 .. only:: html
 

@@ -100,6 +100,10 @@ a station near to SGP
 
       :download:`Download Python source code: plot_airnow.py <plot_airnow.py>`
 
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: plot_airnow.zip <plot_airnow.zip>`
+
 
 .. only:: html
 

@@ -225,6 +225,10 @@ file but called under the qcfilter method.
 
       :download:`Download Python source code: plot_qc_example.py <plot_qc_example.py>`
 
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: plot_qc_example.zip <plot_qc_example.zip>`
+
 
 .. only:: html
 
