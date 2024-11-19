@@ -1,7 +1,3 @@
-================================================
-Atmospheric data Community Toolkit Documentation
-================================================
-
 .. toctree::
    :maxdepth: 2
    :hidden:
